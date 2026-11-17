@@ -1,0 +1,4706 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Stefano's Peaceful English Sanctuary | Latest Lesson Transcript & Vocabulary</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Literary Serif), Plus Jakarta Sans (Soft Modern UI), JetBrains Mono (Timestamps & IPA) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            parchment: {
+              50: '#fbf9f5',
+              100: '#f6f1e7',
+              200: '#ede3d1',
+              300: '#dfd0b5',
+              400: '#cbb38e',
+              500: '#b6966b',
+            },
+            autumn: {
+              50: '#fcf6f0',
+              100: '#f7e9db',
+              200: '#eed0b5',
+              300: '#e2b086',
+              400: '#d38c57',
+              500: '#be6f38',
+              600: '#a3582b',
+              700: '#854524',
+              800: '#6c3921',
+            },
+            sage: {
+              50: '#f4f7f5',
+              100: '#e4ece7',
+              200: '#cadad1',
+              300: '#a5bfb1',
+              400: '#7b9f8d',
+              500: '#5b826f',
+              600: '#476858',
+              700: '#3a5448',
+              800: '#30443b',
+            },
+            slatewarm: {
+              700: '#3d4441',
+              800: '#2b312e',
+              900: '#1e2321',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP for Gentle Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Popper & Tippy.js for Interactive Vocabulary Explanations -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+
+  <!-- Canvas Confetti for Gentle Practice Encouragement -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-base: #f9f6f0;
+      --bg-card: rgba(255, 253, 249, 0.90);
+      --bg-subcard: rgba(255, 255, 255, 0.94);
+      --border-soft: #e6decb;
+      --border-accent: #d9c8b0;
+      --text-main: #2b312e;
+      --text-muted: #5c6660;
+      --grad-1: rgba(238, 208, 181, 0.42);
+      --grad-2: rgba(202, 218, 209, 0.48);
+      --grad-3: rgba(246, 241, 231, 0.70);
+    }
+
+    body[data-theme="winchester"] {
+      --bg-base: #f3f6f5;
+      --bg-card: rgba(252, 254, 253, 0.91);
+      --bg-subcard: rgba(255, 255, 255, 0.95);
+      --border-soft: #d7e2dc;
+      --border-accent: #b8ccc2;
+      --text-main: #26312d;
+      --text-muted: #52635c;
+      --grad-1: rgba(202, 218, 209, 0.50);
+      --grad-2: rgba(219, 228, 238, 0.48);
+      --grad-3: rgba(244, 240, 230, 0.55);
+    }
+
+    body[data-theme="twilight"] {
+      --bg-base: #f5efe6;
+      --bg-card: rgba(253, 249, 242, 0.92);
+      --bg-subcard: rgba(255, 252, 247, 0.96);
+      --border-soft: #e2d2be;
+      --border-accent: #cfaea0;
+      --text-main: #2d2622;
+      --text-muted: #665850;
+      --grad-1: rgba(226, 176, 134, 0.36);
+      --grad-2: rgba(214, 196, 176, 0.42);
+      --grad-3: rgba(235, 220, 202, 0.55);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(at 8% 5%, var(--grad-1) 0px, transparent 52%),
+        radial-gradient(at 92% 18%, var(--grad-2) 0px, transparent 52%),
+        radial-gradient(at 50% 88%, var(--grad-3) 0px, transparent 58%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      transition: background-color 0.5s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 36px -10px rgba(91, 130, 111, 0.08), 0 4px 14px -3px rgba(43, 49, 46, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sanctuary-subcard {
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 14px -4px rgba(43, 49, 46, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    /* Inline Vocabulary Highlight in Transcript */
+    .vocab-mark {
+      display: inline-block;
+      background: linear-gradient(120deg, rgba(226, 176, 134, 0.25) 0%, rgba(165, 191, 177, 0.28) 100%);
+      border-bottom: 2px dashed #a3582b;
+      color: #5b3216;
+      font-weight: 600;
+      padding: 0px 5px;
+      margin: 0 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .vocab-mark:hover, .vocab-mark.active-vocab {
+      background: linear-gradient(120deg, rgba(190, 111, 56, 0.25) 0%, rgba(91, 130, 111, 0.32) 100%);
+      border-bottom-style: solid;
+      border-bottom-color: #476858;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(163, 88, 43, 0.14);
+    }
+
+    body.hide-vocab-highlights .vocab-mark {
+      background: transparent !important;
+      border-bottom: none !important;
+      color: inherit !important;
+      font-weight: inherit !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Note-taker fix badge */
+    .asr-fix-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f7f5;
+      color: #476858;
+      border: 1px solid #cadad1;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    body.hide-asr-fixes .asr-fix-pill {
+      display: none !important;
+    }
+
+    /* Custom Tippy Tooltip Theme: Peaceful Autumn */
+    .tippy-box[data-theme~='autumn-sanctuary'] {
+      background-color: #fffdf9;
+      color: #2b312e;
+      border: 1px solid #dfd0b5;
+      border-radius: 1rem;
+      box-shadow: 0 20px 38px -8px rgba(61, 68, 65, 0.16), 0 6px 16px -4px rgba(163, 88, 43, 0.08);
+      padding: 0.35rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='top'] > .tippy-arrow::before {
+      border-top-color: #dfd0b5;
+    }
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='bottom'] > .tippy-arrow::before {
+      border-bottom-color: #dfd0b5;
+    }
+
+    /* Highlight pulse when jumping to a transcript line */
+    @keyframes gentleGlow {
+      0% { background-color: rgba(226, 176, 134, 0.45); transform: scale(1.005); }
+      50% { background-color: rgba(165, 191, 177, 0.38); }
+      100% { background-color: transparent; transform: scale(1); }
+    }
+    .turn-highlight-flash {
+      animation: gentleGlow 2.8s ease-out;
+    }
+
+    @media print {
+      .no-print, #autumn-breeze-canvas { display: none !important; }
+      body { background: #fff !important; }
+      .sanctuary-card, .sanctuary-subcard { box-shadow: none !important; border: 1px solid #ccc !important; }
+    }
+  </style>
+</head>
+<body data-theme="kensington" class="font-sans antialiased min-h-screen selection:bg-autumn-200 selection:text-slatewarm-900 relative">
+
+  <!-- CALMING AUTUMN BREEZE CANVAS OVERLAY -->
+  <canvas id="autumn-breeze-canvas" class="fixed inset-0 pointer-events-none z-20 opacity-80"></canvas>
+
+  <!-- TOP MULTI-LESSON ARCHIVE BAR -->
+  <aside class="bg-gradient-to-r from-sage-800 via-sage-700 to-autumn-700 text-white text-xs py-2 px-4 shadow-sm relative z-50 flex items-center justify-between gap-3 flex-wrap no-print">
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-300 text-stone-900 font-bold text-[11px] shadow">
+        🌿 Lesson 02 • Nov 5, 2026 (Current)
+      </span>
+      <a href="./lesson-01.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 hover:bg-white/30 text-white font-mono text-[11px] font-semibold transition">
+        📖 Switch to Lesson 01 • Nov 3, 2026 →
+      </a>
+    </div>
+    <div class="flex items-center gap-3 text-[11px]">
+      <a href="./transcripts/11-05-2026.txt" target="_blank" class="underline hover:text-amber-200 transition">Raw Transcript (Nov 5)</a>
+      <span>•</span>
+      <a href="./transcripts/11-03-2026.txt" target="_blank" class="underline hover:text-amber-200 transition">Raw Transcript (Nov 3)</a>
+    </div>
+  </aside>
+
+  <!-- STICKY PEACEFUL NAVIGATION & ATMOSPHERE BAR -->
+  <header class="sticky top-0 z-40 border-b border-[#e6decb]/90 bg-[#fbf9f5]/85 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div id="brand-initial" class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sage-600 via-sage-500 to-autumn-500 flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm">
+          D
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="brand-title" class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slatewarm-900">Diego's Peaceful English Sanctuary</span>
+            <span id="brand-badge" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-sage-100 text-sage-800 border border-sage-200">
+              Lesson 02 • The 16-Second Pitch, Economic Debate, Two Truths and a Lie & Game of Life
+            </span>
+          </div>
+          <p id="brand-subtitle" class="text-[11px] text-stone-500 hidden md:block">A calm, tidy space with your corrected lesson transcript, timestamps, and flagged vocabulary</p>
+        </div>
+      </div>
+
+      <!-- Calming Atmosphere Controls -->
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="flex items-center gap-1.5 bg-white/90 border border-[#dfd0b5] rounded-xl px-2.5 py-1 shadow-sm">
+          <button id="soundscape-btn" onclick="toggleSoundscape()" class="flex items-center gap-1.5 text-xs font-semibold text-sage-700 hover:text-sage-900 transition px-1.5 py-0.5 rounded-lg">
+            <i data-lucide="wind" class="w-3.5 h-3.5 text-autumn-600"></i>
+            <span id="soundscape-label">London Breeze Audio: Off</span>
+          </button>
+          <select id="soundscape-preset" onchange="changeSoundscapePreset(this.value)" class="text-[11px] bg-parchment-50 border border-parchment-200 rounded-lg px-1.5 py-0.5 text-stone-700 focus:outline-none">
+            <option value="breeze">🍂 Kensington Breeze</option>
+            <option value="rain">🌧️ Soft London Rain</option>
+            <option value="study">🕯️ Warm Study Hearth</option>
+          </select>
+          <input id="soundscape-volume" type="range" min="0.05" max="0.6" step="0.05" value="0.22" oninput="updateSoundscapeVolume(this.value)" class="w-14 accent-sage-600 cursor-pointer hidden sm:block" />
+        </div>
+
+        <button id="leaves-toggle-btn" onclick="cycleLeafBreeze()" class="px-2.5 py-1.5 rounded-xl bg-white/90 hover:bg-autumn-50 border border-[#dfd0b5] text-xs font-medium text-stone-700 flex items-center gap-1.5 shadow-sm transition">
+          <i data-lucide="leaf" class="w-3.5 h-3.5 text-autumn-600"></i>
+          <span id="leaves-label" class="hidden sm:inline">Leaves: Gentle</span>
+        </button>
+
+        <div class="flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl px-2 py-1 shadow-sm text-xs">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-sage-600"></i>
+          <button onclick="setVoiceRate(0.85)" id="rate-slow" class="px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition">0.85×</button>
+          <button onclick="setVoiceRate(1.0)" id="rate-normal" class="px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition">UK 1×</button>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl p-1 text-[11px] shadow-sm">
+          <button onclick="setThemeMood('kensington')" id="theme-kensington" class="px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition">Bath Stone</button>
+          <button onclick="setThemeMood('winchester')" id="theme-winchester" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Winchester Mist</button>
+          <button onclick="setThemeMood('twilight')" id="theme-twilight" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Warm Study</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-7 relative z-10">
+
+    <!-- HERO BANNER -->
+    <section class="sanctuary-card rounded-3xl p-6 sm:p-9 relative overflow-hidden">
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+        <div class="lg:col-span-8 space-y-3.5">
+          <div id="hero-meta-pill" class="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-sage-100/90 border border-sage-200 text-sage-800 text-xs font-medium"></div>
+          <h1 id="hero-heading" class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slatewarm-900 leading-[1.16]"></h1>
+          <p id="hero-intro" class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl"></p>
+        </div>
+
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+          <div onclick="switchTab('transcript')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-autumn-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700" id="stat-duration">Full Dialogue Log</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Full Transcript</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Every turn tidied with inline vocab & timestamps</p>
+          </div>
+          <div onclick="switchTab('vocab')" class="cursor-pointer p-4 rounded-2xl bg-sage-50/95 border border-sage-200 hover:border-sage-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-sage-700" id="stat-vocab-count">52 Items</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Vocabulary & Idioms</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">B2–C2 words, UK audio & Spanish equivalents</p>
+          </div>
+          <div onclick="switchTab('fixes')" class="cursor-pointer p-4 rounded-2xl bg-autumn-50/95 border border-autumn-200 hover:border-autumn-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700" id="stat-fixes-count">12 Fixes</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Note-Taker Fixes</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Sorted speech-to-text errors & 6 phrasing polishes</p>
+          </div>
+          <div onclick="switchTab('places')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-sage-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-sage-700">Masterclass</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Topics & Practice</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Stage breakdowns, flashcards & quiz</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-TAB NAVIGATION BAR -->
+    <nav class="sanctuary-card rounded-2xl p-2 flex flex-wrap items-center justify-between gap-2 no-print">
+      <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
+          <i data-lucide="message-square-quote" class="w-4 h-4"></i>
+          <span>1. Lesson Transcript & Inline Vocab</span>
+        </button>
+        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600"></i>
+          <span>2. Vocabulary Dictionary</span>
+        </button>
+        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600"></i>
+          <span>3. Note-Taker Fixes & Natural Strengths</span>
+        </button>
+        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="landmark" class="w-4 h-4 text-autumn-600"></i>
+          <span>4. Masterclass Topics & Strategy</span>
+        </button>
+        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="coffee" class="w-4 h-4 text-sage-600"></i>
+          <span>5. Peaceful Practice</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- TAB 1: FULL LESSON TRANSCRIPT -->
+    <section id="tab-panel-transcript" class="tab-panel space-y-6">
+      <div class="sanctuary-card rounded-3xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-4">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Interactive Conversation Transcript</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+              Our Speaking Workshop — With Vocabulary Explained Right In Context
+            </h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Search transcript or time..." class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none w-48" />
+            <select id="speaker-filter" onchange="filterTranscript()" class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">Both Speakers</option>
+              <option value="Stefano" id="opt-student-speaker">Stefano's Turns Only</option>
+              <option value="Louie">Louie Only</option>
+            </select>
+            <button onclick="toggleVocabHighlights()" id="btn-toggle-highlights" class="px-3 py-1.5 rounded-xl bg-autumn-100 text-autumn-800 border border-autumn-300 text-xs font-semibold">
+              <span>Vocab Highlights: On</span>
+            </button>
+            <button onclick="toggleAsrBadges()" id="btn-toggle-asr" class="px-3 py-1.5 rounded-xl bg-sage-100 text-sage-800 border border-sage-300 text-xs font-semibold">
+              <span>Note-Taker Fixes: Visible</span>
+            </button>
+          </div>
+        </div>
+        <div id="chapter-pills-bar" class="flex flex-wrap items-center gap-1.5 pt-1"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-8 space-y-4" id="transcript-stream-container"></div>
+        <aside class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+          <div class="sanctuary-card rounded-3xl p-5 sm:p-6 border-t-4 border-t-autumn-500 space-y-4 shadow-sm" id="vocab-inspector-card">
+            <div class="flex items-center justify-between gap-2 border-b border-[#e6decb] pb-3">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-1.5">
+                <i data-lucide="sparkle" class="w-3.5 h-3.5"></i>
+                Vocabulary Spotlight
+              </span>
+              <span id="insp-time" class="px-2.5 py-0.5 rounded-full bg-parchment-100 border border-parchment-300 font-mono text-xs text-stone-700">🕒 00:00</span>
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <h3 id="insp-word" class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Select a word</h3>
+                <button id="insp-audio-btn" onclick="speakWord('Welcome')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0">
+                  <i data-lucide="volume-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <div class="flex flex-wrap items-center gap-2 mt-1.5">
+                <span id="insp-ipa" class="text-xs font-mono text-stone-500"></span>
+                <span id="insp-pos" class="px-2 py-0.5 text-[11px] rounded-md bg-parchment-100 text-stone-700 font-medium"></span>
+                <span id="insp-level" class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800 font-mono font-semibold"></span>
+              </div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-parchment-50 border border-parchment-200 space-y-1">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Meaning & Nuance</div>
+              <p id="insp-def" class="text-xs sm:text-sm text-slatewarm-800 leading-relaxed"></p>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-sage-50/80 border border-sage-200 space-y-1">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">How It Was Used in Our Lesson</div>
+              <p id="insp-quote" class="text-xs italic text-stone-700 leading-relaxed"></p>
+            </div>
+            <div class="flex items-center justify-between pt-1 text-xs border-t border-[#e6decb]">
+              <span class="text-stone-500" id="insp-l1-label">🇪🇸 Conexión en español:</span>
+              <span id="insp-l1" class="font-semibold text-sage-800"></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TAB 2: VOCABULARY DICTIONARY -->
+    <section id="tab-panel-vocab" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Timestamped Lexicon</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">Vocabulary, Idioms & Expressions</h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Search word, meaning, time..." class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 w-52" />
+            <select id="vocab-level-filter" onchange="renderVocabGrid()" class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">All Levels (B2–C2)</option>
+              <option value="C2">C2 Mastery</option>
+              <option value="C1">C1 Advanced</option>
+              <option value="B2">B2 Upper-Intermediate</option>
+            </select>
+          </div>
+        </div>
+        <div id="vocab-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: NOTE-TAKER FIXES & GENTLE NOTES -->
+    <section id="tab-panel-fixes" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Your Natural Strengths & Gentle Phrasing Polishes</h2>
+        <div class="p-5 rounded-2xl bg-sage-50/90 border border-sage-200 space-y-3">
+          <div class="font-serif font-bold text-xl text-sage-800">Expressions You Used Naturally & Accurately Today</div>
+          <div id="student-strengths-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="gentle-polishes-grid"></div>
+      </div>
+
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">How We Sorted Out the Automated Note-Taker's Spelling Mistakes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="asr-fixes-grid"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MASTERCLASS TOPICS -->
+    <section id="tab-panel-places" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Masterclass Frameworks & Strategic Breakdowns</h2>
+        <div id="cultural-places-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- TAB 5: PEACEFUL PRACTICE -->
+    <section id="tab-panel-practice" class="tab-panel hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Gentle Vocabulary Flashcards</h3>
+            <span id="fc-counter" class="text-xs font-mono text-stone-500">Card 1</span>
+          </div>
+          <div onclick="flipFlashcard()" class="cursor-pointer sanctuary-subcard rounded-2xl p-7 min-h-[240px] flex flex-col items-center justify-center text-center space-y-3 border-2 border-[#dfd0b5] hover:border-autumn-400 transition select-none">
+            <span id="fc-badge" class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-mono"></span>
+            <h4 id="fc-front-title" class="font-serif text-3xl font-bold text-slatewarm-900"></h4>
+            <p id="fc-sub" class="text-xs sm:text-sm text-stone-600 max-w-md leading-relaxed"></p>
+            <div id="fc-back-details" class="hidden space-y-2 pt-2 border-t border-parchment-200 w-full">
+              <p id="fc-quote" class="text-xs italic text-sage-800"></p>
+              <p id="fc-l1" class="text-xs font-semibold text-autumn-700"></p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-2 pt-2">
+            <button onclick="prevFlashcard()" class="px-4 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-xs font-semibold text-stone-700 transition">← Previous</button>
+            <button onclick="speakCurrentFlashcard()" class="px-4 py-2 rounded-xl bg-sage-100 hover:bg-sage-200 text-xs font-semibold text-sage-800 transition">🔊 Listen (UK)</button>
+            <button onclick="nextFlashcard()" class="px-4 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 text-xs font-semibold text-white transition">Next →</button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Match the Concept to Our Lesson</h3>
+            <span id="quiz-score-badge" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">0 Completed</span>
+          </div>
+          <div id="quiz-container" class="space-y-4 max-h-[420px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+
+      <!-- 3 Thoughtful Conversation Prompts -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-autumn-800 font-serif font-bold text-2xl">
+          <i data-lucide="coffee" class="w-5 h-5 text-autumn-600"></i>
+          <span>3 Thoughtful Conversation Prompts for Stefano (For Next Lesson)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-500">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 01 • The 16-Second Elevator Pitch</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Concise Persuasion Under Pressure</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Pick a workplace proposal, audio tech upgrade, or public policy idea. Set a 16-second timer and pitch your argument directly, anchoring your points around tangible citizen impact (quality of life), concrete actions, and measurable outcomes.
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-autumn-500">
+            <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">Prompt 02 • Conceptual Nuance</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Distinguishing Near-Synonyms</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Practice explaining the delicate boundary between two related philosophical or emotional states without using their direct names (e.g., <em>Knowledge</em> vs. <em>Wisdom</em>, <em>Ambition</em> vs. <em>Contentment</em>, or <em>Love</em> vs. <em>Attachment</em>). Highlight who benefits and where superficiality ends.
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-500">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 03 • Storytelling with Suspense</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">The Strategic Narrative Twist</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Recount a surprising real-life experience (such as your Mallorca wedding encounter or meeting FC Barcelona staff). Structure your narrative so that the surprising identity or unexpected outcome is withheld until the very last sentence to build maximum curiosity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const LESSON_CONFIG = {
+      studentName: "Stefano",
+      lessonNumber: "Latest Lesson",
+      lessonDate: "November 5, 2026",
+      lessonSubtitle: "Krisp AI Synced Transcript • 421 Turns • 12 Key Vocabulary Items",
+      l1FlagAndLabel: "🇮🇹 In italiano:",
+      heroHeadingHtml: `Welcome, Stefano — Your <span class="text-autumn-700 italic font-semibold">Peaceful Sanctuary</span> for English Reflection`,
+      heroIntroText: "Here is your tidy transcript from November 5, 2026 with exact timestamps and 12 flagged B2–C2 vocabulary items ready for review.",
+      defaultSpotlightKey: "obviously"
+    };
+
+    const VOCAB_DB = {
+    "obviously":  {
+                      "word":  "obviously",
+                      "ipa":  "/ˈɒb.vi.əs.li/",
+                      "pos":  "adverb",
+                      "level":  "B2",
+                      "cat":  "abstract",
+                      "def":  "In a way that is easy to see or understand.",
+                      "quote":  "Louie (25:43): \"Yeah, I say, in Vietnamese, there\u0027s this expression called \"and D is to eat, and D is to go.\" But when you\u0027re at a dinner table, you tell pe...\"",
+                      "es":  "obviously",
+                      "turnId":  "turn-153",
+                      "time":  "25:43"
+                  },
+    "absolutely":  {
+                       "word":  "absolutely",
+                       "ipa":  "/ˌæb.səˈluːt.li/",
+                       "pos":  "adverb",
+                       "level":  "B2",
+                       "cat":  "emotions",
+                       "def":  "Completely and without any doubt.",
+                       "quote":  "Louie (21:28): \"Yeah, w wow, absolutely beautiful.\"",
+                       "es":  "absolutely",
+                       "turnId":  "turn-121",
+                       "time":  "21:28"
+                   },
+    "completely":  {
+                       "word":  "completely",
+                       "ipa":  "/kəmˈpliːt.li/",
+                       "pos":  "adverb",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "Totally; in every way.",
+                       "quote":  "Louie (05:41): \"I completely forgot about this. I forgot about Gemini. I\u0027m working. I completely forgot. I have to tell you, the first time it ever happened...\"",
+                       "es":  "completely",
+                       "turnId":  "turn-15",
+                       "time":  "05:41"
+                   },
+    "especially":  {
+                       "word":  "especially",
+                       "ipa":  "/ɪˈspeʃ.əl.i/",
+                       "pos":  "adverb",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "Particularly; above all others.",
+                       "quote":  "Louie (34:22): \"And they\u0027re not drinking that much. They get drunk so easily, and. But they won\u0027t let me go to bed, and especially if there\u0027s people older t...\"",
+                       "es":  "especially",
+                       "turnId":  "turn-243",
+                       "time":  "34:22"
+                   },
+    "definitely":  {
+                       "word":  "definitely",
+                       "ipa":  "/ˈdef.ɪ.nət.li/",
+                       "pos":  "adverb",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "Without any doubt; certainly.",
+                       "quote":  "Louie (26:41): \"It definitely is my girlfriend\u0027s father.\"",
+                       "es":  "definitely",
+                       "turnId":  "turn-155",
+                       "time":  "26:41"
+                   },
+    "actually":  {
+                     "word":  "actually",
+                     "ipa":  "/ˈæk.tʃu.ə.li/",
+                     "pos":  "adverb",
+                     "level":  "B2",
+                     "cat":  "abstract",
+                     "def":  "In fact or really—often used to clarify or gently correct.",
+                     "quote":  "Stefano (01:18): \"Actually, they contact me in the first stage, and they usually call me for, when there is when there are some problems of some submissions t...\"",
+                     "es":  "actually",
+                     "turnId":  "turn-12",
+                     "time":  "01:18"
+                 },
+    "comfortable":  {
+                        "word":  "comfortable",
+                        "ipa":  "/ˈkʌm.fə.tə.bəl/",
+                        "pos":  "adjective",
+                        "level":  "B2",
+                        "cat":  "emotions",
+                        "def":  "Feeling relaxed, at ease, and free from stress.",
+                        "quote":  "Stefano (40:54): \"It\u0027s comfortable.\"",
+                        "es":  "comfortable",
+                        "turnId":  "turn-294",
+                        "time":  "40:54"
+                    },
+    "experience":  {
+                       "word":  "experience",
+                       "ipa":  "/ɪkˈspɪə.ri.əns/",
+                       "pos":  "noun",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "Knowledge or skill gained from doing something over time.",
+                       "quote":  "Stefano (10:41): \"Because I worked with German colleagues in the past when I worked in the publishing company, and the experience was better because... I don\u0027...\"",
+                       "es":  "experience",
+                       "turnId":  "turn-64",
+                       "time":  "10:41"
+                   },
+    "communicate":  {
+                        "word":  "communicate",
+                        "ipa":  "/kəˈmjuː.nɪ.keɪt/",
+                        "pos":  "verb",
+                        "level":  "B2",
+                        "cat":  "rhythm",
+                        "def":  "To share information, ideas, or feelings clearly with others.",
+                        "quote":  "Louie (01:57): \"Yeah, no words, just numbers. Yes... So may I ask how when you call and communicate with your counterparts in Germany...\"",
+                        "es":  "communicate",
+                        "turnId":  "turn-9",
+                        "time":  "01:57"
+                    },
+    "understand":  {
+                       "word":  "understand",
+                       "ipa":  "/ˌʌn.dəˈstænd/",
+                       "pos":  "verb",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "To grasp the meaning, reason, or feeling of something.",
+                       "quote":  "Louie (01:53): \"I understand, but I...\"",
+                       "es":  "understand",
+                       "turnId":  "turn-7",
+                       "time":  "01:53"
+                   },
+    "incredible":  {
+                       "word":  "incredible",
+                       "ipa":  "/ɪnˈkred.ə.bəl/",
+                       "pos":  "adjective",
+                       "level":  "B2",
+                       "cat":  "emotions",
+                       "def":  "Extremely good, impressive, or hard to believe.",
+                       "quote":  "Louie (50:30): \"Exactly. So people really hook up and date in our bars because they have these incredible nights where they\u0027re moving around and seeing new ...\"",
+                       "es":  "incredible",
+                       "turnId":  "turn-409",
+                       "time":  "50:30"
+                   },
+    "culture":  {
+                    "word":  "culture",
+                    "ipa":  "/ˈkʌl.tʃər/",
+                    "pos":  "noun",
+                    "level":  "B2",
+                    "cat":  "travel",
+                    "def":  "The customs, arts, social institutions, and habits of a group or nation.",
+                    "quote":  "Louie (36:40): \"Yeah. The thing is, I can\u0027t go to bed until everyone... Because of the culture, everyone older than me has to go to bed before me. I cannot ...\"",
+                    "es":  "culture",
+                    "turnId":  "turn-257",
+                    "time":  "36:40"
+                }
+};
+    const TRANSCRIPT_TURNS = [
+    {
+        "id":  "turn-1",
+        "chapterId":  "chap-1",
+        "chapterTitle":  "Chapter I • Opening \u0026 Warm-Up (00:00)",
+        "speaker":  "Louie",
+        "time":  "00:00",
+        "html":  "Hey, the father. How are you doing today?"
+    },
+    {
+        "id":  "turn-2",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "00:03",
+        "html":  "Very busy day. [Laughter]..."
+    },
+    {
+        "id":  "turn-3",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "00:05",
+        "html":  "No problem at all. No problem at all. So still busy. Busy getting even. Busier..."
+    },
+    {
+        "id":  "turn-4",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "00:11",
+        "html":  "Yeah. Because today it was a mixture between the monthly closing and the budgeting process. So I expressed several times to contact me my colleagues, my German colleagues, and to discuss some issues. So I totally... [Laughter] Confused my English. Which will be very strange to..."
+    },
+    {
+        "id":  "turn-5",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:51",
+        "html":  "No problem. Maybe."
+    },
+    {
+        "id":  "turn-6",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "01:52",
+        "html":  "Today [Laughter]..."
+    },
+    {
+        "id":  "turn-7",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:53",
+        "html":  "I \u003cspan class=\"vocab-mark\" data-vkey=\"understand\" onclick=\"inspectVocab(\u0027understand\u0027)\"\u003eunderstand\u003c/span\u003e, but I..."
+    },
+    {
+        "id":  "turn-8",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "01:55",
+        "html":  "I\u0027ve got the numbers."
+    },
+    {
+        "id":  "turn-9",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:57",
+        "html":  "Yeah, no words, just numbers. Yes... So may I ask how when you call and \u003cspan class=\"vocab-mark\" data-vkey=\"communicate\" onclick=\"inspectVocab(\u0027communicate\u0027)\"\u003ecommunicate\u003c/span\u003e with your counterparts in Germany..."
+    },
+    {
+        "id":  "turn-10",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "01:11",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-11",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:12",
+        "html":  "You say, \"Hey, what\u0027s going on here? What is their reaction?\""
+    },
+    {
+        "id":  "turn-12",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "01:18",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"actually\" onclick=\"inspectVocab(\u0027actually\u0027)\"\u003eActually\u003c/span\u003e, they contact me in the first stage, and they usually call me for, when there is when there are some problems of some submissions to discuss. And they usually start with the e mail. And the strange thing is that the finance department in Germany is huge and all the employees work for a small part of the finance. Finance, arguments. So you may be contacted by three, four different employees for this. The same issue. And. And they\u0027ve. And they\u0027ve got, different opinion of the same issue, and they don\u0027t discuss together before calling me, so. So, for example, today, I received an e mail from, for example, I was. I was discussing the discussion was, concerned about, the Theco Center location. One co central location. The R\u0026D co central location and the and an employee in charge of the controlling told me that I had to classify the consenter in with the sales core center together. The other one told me that it would be better to separate just for analysis and understanding, well, the allocation. So all day with this and at the end, I received an email from the maximum head. They told me, \"No, it\u0027s necessary to separate it.\" So I wrote an email to five or six medium managers and juniors that contacted me just with the one I told them I would go in that way. So to close the discussion, I decided to write a single last email. Then I received three or four calls or teams calls because the teams are part of the... Yeah, to discuss... So you avoid writing an email and you can contact through teams. So today I spent a lot of time for just one issue..."
+    },
+    {
+        "id":  "turn-13",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:34",
+        "html":  "I understand..."
+    },
+    {
+        "id":  "turn-14",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "05:35",
+        "html":  "And I hope now then that it probably it\u0027s solved. So [Laughter]..."
+    },
+    {
+        "id":  "turn-15",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:41",
+        "html":  "I \u003cspan class=\"vocab-mark\" data-vkey=\"completely\" onclick=\"inspectVocab(\u0027completely\u0027)\"\u003ecompletely\u003c/span\u003e forgot about this. I forgot about Gemini. I\u0027m working. I \u003cspan class=\"vocab-mark\" data-vkey=\"completely\" onclick=\"inspectVocab(\u0027completely\u0027)\"\u003ecompletely\u003c/span\u003e forgot. I have to tell you, the first time it ever happened to me, I had to go to the Arbeit Center. I can remember. The Arbeit Center is where you go to get your German social security."
+    },
+    {
+        "id":  "turn-16",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "05:09",
+        "html":  "The HR D HR no, the yeah..."
+    },
+    {
+        "id":  "turn-17",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:13",
+        "html":  "Yeah, the government..."
+    },
+    {
+        "id":  "turn-18",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "05:13",
+        "html":  "HS services..."
+    },
+    {
+        "id":  "turn-19",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:15",
+        "html":  "Yes, the government place where they..."
+    },
+    {
+        "id":  "turn-20",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "05:16",
+        "html":  "The pension."
+    },
+    {
+        "id":  "turn-21",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:18",
+        "html":  "Yes, and I have an Irish surname, so my name is... I have an Irish surname, and it has... In fact, my Loom is just..."
+    },
+    {
+        "id":  "turn-22",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "05:25",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-23",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:27",
+        "html":  "Calling me to help, but I\u0027ll speak to her later. Yeah, [Laughter] and..."
+    },
+    {
+        "id":  "turn-24",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:30",
+        "html":  "No, listen, no answer."
+    },
+    {
+        "id":  "turn-25",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:33",
+        "html":  "It\u0027s okay. It\u0027s okay. She\u0027s coming..."
+    },
+    {
+        "id":  "turn-26",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:34",
+        "html":  "[Laughter] Hey..."
+    },
+    {
+        "id":  "turn-27",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:36",
+        "html":  "She\u0027s com she\u0027s calling me because, my brother\u0027s girlfriend..."
+    },
+    {
+        "id":  "turn-28",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:40",
+        "html":  "At midnight."
+    },
+    {
+        "id":  "turn-29",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:42",
+        "html":  "Ca my Loom..."
+    },
+    {
+        "id":  "turn-30",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:44",
+        "html":  "I know because..."
+    },
+    {
+        "id":  "turn-31",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:46",
+        "html":  "She\u0027s in..."
+    },
+    {
+        "id":  "turn-32",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:46",
+        "html":  "At a..."
+    },
+    {
+        "id":  "turn-33",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:47",
+        "html":  "England. Yes..."
+    },
+    {
+        "id":  "turn-34",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:47",
+        "html":  "Different. Okay..."
+    },
+    {
+        "id":  "turn-35",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:48",
+        "html":  "Yeah, but she\u0027s calling me because my brother\u0027s girlfriend is being a bit naughty. Yes, my brother is a little bit ill, and she is looking after him. My mother, myself, and my father are sending her money just..."
+    },
+    {
+        "id":  "turn-36",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:10",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-37",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:11",
+        "html":  "And to..."
+    },
+    {
+        "id":  "turn-38",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:12",
+        "html":  "To help her."
+    },
+    {
+        "id":  "turn-39",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:14",
+        "html":  "Yes, and she\u0027s asking for some weird things that he doesn\u0027t need, so my mother\u0027s quite upset. But anyway, that\u0027s for another time..."
+    },
+    {
+        "id":  "turn-40",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "06:26",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-41",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:26",
+        "html":  "But at the Arbeit Censer. I have an Irish name, and Irish names sometimes have an apostrophe."
+    },
+    {
+        "id":  "turn-42",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:36",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-43",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:36",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-44",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:37",
+        "html":  "So you couldn\u0027t let them understand."
+    },
+    {
+        "id":  "turn-45",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:41",
+        "html":  "So my name\u0027s O\u0027SHEA. I\u0027m an O\u0027SHEA, and I went to O because you had to go to the right counter. I went... To O. They said... No, your name\u0027s not... Doesn\u0027t start with a O..."
+    },
+    {
+        "id":  "turn-46",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:55",
+        "html":  "Is not correct."
+    },
+    {
+        "id":  "turn-47",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:56",
+        "html":  "It starts with an S. I went TOS and they were like, \"No, it starts with an O.\" I was like..."
+    },
+    {
+        "id":  "turn-48",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:04",
+        "html":  "My good..."
+    },
+    {
+        "id":  "turn-49",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:06",
+        "html":  "And they none of them would yield. They would not, talk to each other."
+    },
+    {
+        "id":  "turn-50",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:11",
+        "html":  "Because I\u0027m in this way, so. I..."
+    },
+    {
+        "id":  "turn-51",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:13",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-52",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:13",
+        "html":  "Don\u0027t know..."
+    },
+    {
+        "id":  "turn-53",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:15",
+        "html":  "Yes, and that\u0027s before I even started working. That\u0027s just to get the document. Yeah. [Laughter]..."
+    },
+    {
+        "id":  "turn-54",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "07:25",
+        "html":  "[Laughter] Yeah, it\u0027s very strange because it\u0027s a corporate, multinational. It\u0027s a corporate with several subsidiaries in all the countries in every part of the world. So I can\u0027t imagine how they can handle this. All these in this way because central... I think that central they have a sort of confusion in managing all the tasks and so on. I can tell you that they are keeping on adding more tasks. Huge tasks, restricted deadlines, and I don\u0027t know how it\u0027s possible to..."
+    },
+    {
+        "id":  "turn-55",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "08:29",
+        "html":  "Yes, yeah, I suppose..."
+    },
+    {
+        "id":  "turn-56",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "09:32",
+        "html":  "Mag it."
+    },
+    {
+        "id":  "turn-57",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "09:32",
+        "html":  "In their eyes, they think, even though, like in your case, that the person was wrong, that... We save time because the correct work format is brought to us. So we do not waste our time with improper work formats."
+    },
+    {
+        "id":  "turn-58",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "09:50",
+        "html":  "Yeah, it\u0027s a waste of time. Yeah, and because here in Italy, we work in other ways so we know how to deal with the issue."
+    },
+    {
+        "id":  "turn-59",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "09:06",
+        "html":  "No."
+    },
+    {
+        "id":  "turn-60",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "09:07",
+        "html":  "We go deeper into the issue, but with no confusion, and it\u0027s assumed that the German manager is better than the Italian one..."
+    },
+    {
+        "id":  "turn-61",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "10:30",
+        "html":  "[Laughter] Yes."
+    },
+    {
+        "id":  "turn-62",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "10:30",
+        "html":  "Is the normal. But. M Ma. PS t that it\u0027s, deposit [Laughter]..."
+    },
+    {
+        "id":  "turn-63",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "10:41",
+        "html":  "I think..."
+    },
+    {
+        "id":  "turn-64",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "10:41",
+        "html":  "Because I worked with German colleagues in the past when I worked in the publishing company, and the \u003cspan class=\"vocab-mark\" data-vkey=\"experience\" onclick=\"inspectVocab(\u0027experience\u0027)\"\u003eexperience\u003c/span\u003e was better because... I don\u0027t know, I\u0027ve got some memories that this feels better now because they\u0027re keeping on to introduce new colleagues over there in Germany. Probably they are too young or not so experienced as in the resume because the official function fun, they are called man top manager of the blah. But the Ma... There\u0027s no nothing to do with the manager function."
+    },
+    {
+        "id":  "turn-65",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "11:49",
+        "html":  "When I was in Germany, I believe that their title... They love the title..."
+    },
+    {
+        "id":  "turn-66",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "11:56",
+        "html":  "Yeah, the same, function is can be spread into different in to a lot of different, titles. [Laughter] Manager of the Baba Ba. Manager of the. Let\u0027s see."
+    },
+    {
+        "id":  "turn-67",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "11:17",
+        "html":  "Germany\u0027s... Yeah, Germany\u0027s a funny place. It\u0027s a work. The German workplace is a funny place. Yeah..."
+    },
+    {
+        "id":  "turn-68",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "11:27",
+        "html":  "But they are money, so they are right."
+    },
+    {
+        "id":  "turn-69",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "12:31",
+        "html":  "Yes. So when I was in Germany, we went out for dinner quite a lot. Do you go out for dinner with friends and family? Quite a lot in Italy?"
+    },
+    {
+        "id":  "turn-70",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "12:46",
+        "html":  "We try. Yeah, some times, once a week when we never have the chance to do it. Yeah, once a week when I play soccer. Not the football in a huge field. Just five versus five. So we are 10-10 and after the match, we usually spend some time, an hour to eat a sandwich or... Yeah, but actually, usually, during the weekend. I used to go out if I had the chance. Or out or the fence house."
+    },
+    {
+        "id":  "turn-71",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "13:45",
+        "html":  "So I do have a question. Who is the most interesting person you\u0027ve ever had dinner with?"
+    },
+    {
+        "id":  "turn-72",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "13:02",
+        "html":  "That\u0027s a difficult question. The most interesting, probably my child, [Laughter] my son..."
+    },
+    {
+        "id":  "turn-73",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "13:17",
+        "html":  "[Laughter] Yeah..."
+    },
+    {
+        "id":  "turn-74",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "13:17",
+        "html":  "Because. Yeah, because we have no, many chances to yeah, to spend a dinner just me e and my son. So if, some weeks ago, I. Yeah, I went out for dinner with my son, and it was very nice because we had a chance we had the chance to discuss, deeply person. Yeah, for one hour more. So he told me about his potential girlfriends. [Laughter] Yeah, I... Is it psychological or progress due to the age because he is 14? So 14 years old, so 14 years old, so it is a very young age, and it is the typical period when you have got some psychological problems, something similar. [Laughter] That\u0027s it."
+    },
+    {
+        "id":  "turn-75",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "14:28",
+        "html":  "That\u0027s a lovely answer, that\u0027s the that\u0027s a lovely answer and potential girlfriends. I like that as well. [Laughter]..."
+    },
+    {
+        "id":  "turn-76",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "15:37",
+        "html":  "Because they preferred to tell me about the girlfriend. He preferred to tell me about it, to me, and not to the mother. So..."
+    },
+    {
+        "id":  "turn-77",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "15:51",
+        "html":  "Yeah. Very lovely at... Yeah, 14 is an interesting age because when I was 14, I\u0027m sure the same for you. You\u0027re so sure in a way, but still trying to understand."
+    },
+    {
+        "id":  "turn-78",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "15:11",
+        "html":  "You\u0027d think to have all the answers, but actually it\u0027s not in this way because there you need to... For impressions. So as for, suggestion to a more experienced guy..."
+    },
+    {
+        "id":  "turn-79",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "16:36",
+        "html":  "Yeah, that\u0027s why he\u0027s asking."
+    },
+    {
+        "id":  "turn-80",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "16:37",
+        "html":  "His father. [Laughter]..."
+    },
+    {
+        "id":  "turn-81",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "16:39",
+        "html":  "It\u0027s great. That\u0027s great. Yeah, I think..."
+    },
+    {
+        "id":  "turn-82",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "16:42",
+        "html":  "Yeah, in the pa. Yeah, from experience, I hadn\u0027t, many chances to discuss with my father because it was a very old fashioned, father. Yeah, think about the this work and that\u0027s it. So it was, not a beor. But it was difficult to. To have a one hour discussion, a quiet discussion during the dinner or lunch or something. And I don\u0027t remember, I never. I probably never had a chance to spend a dinner with your father. Meal in and. With within. So I can\u0027t hear you now. A miss you. [Laughter]..."
+    },
+    {
+        "id":  "turn-83",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:57",
+        "html":  "Hello, can you hear me now? I think I talked so..."
+    },
+    {
+        "id":  "turn-84",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "17:02",
+        "html":  "You\u0027re black..."
+    },
+    {
+        "id":  "turn-85",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:02",
+        "html":  "I think I spoke so quietly the microphone..."
+    },
+    {
+        "id":  "turn-86",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "17:05",
+        "html":  "I see. Really a..."
+    },
+    {
+        "id":  "turn-87",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:07",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-88",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "17:07",
+        "html":  "The microphone went down. [Laughter]..."
+    },
+    {
+        "id":  "turn-89",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:09",
+        "html":  "Yes, my father... We would never ever talk about women. Never..."
+    },
+    {
+        "id":  "turn-90",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "17:16",
+        "html":  "Three really..."
+    },
+    {
+        "id":  "turn-91",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:17",
+        "html":  "Yet my father, he I he is..."
+    },
+    {
+        "id":  "turn-92",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "17:21",
+        "html":  "It\u0027s the same for me."
+    },
+    {
+        "id":  "turn-93",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:23",
+        "html":  "Yes, he... I can talk to him. There\u0027s not a problem. But he would not like to have that conversation. Yes... Yeah, my father\u0027s quite..."
+    },
+    {
+        "id":  "turn-94",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "18:36",
+        "html":  "Probably was there..."
+    },
+    {
+        "id":  "turn-95",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "18:38",
+        "html":  "Yeah, he\u0027s not... I think it would make him feel awkward. But..."
+    },
+    {
+        "id":  "turn-96",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "18:45",
+        "html":  "So you would prefer probably to discuss work job..."
+    },
+    {
+        "id":  "turn-97",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "18:51",
+        "html":  "Yes, football, yes..."
+    },
+    {
+        "id":  "turn-98",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "18:59",
+        "html":  "The same thing..."
+    },
+    {
+        "id":  "turn-99",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "18:59",
+        "html":  "If I go round, I love football. We both support Arsenal. Or everyone in our family supports Arsenal, which is Arsenal. Arsenal. Yeah, it\u0027 but, we were very lucky, actually. My brother, he was not in the Arsenal team. He\u0027s not in the Arsenal team, but he went to training with the under 16 year olds, so..."
+    },
+    {
+        "id":  "turn-100",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "18:30",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-101",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "18:30",
+        "html":  "It doesn\u0027t mean you\u0027re in the team, but it meant that we were allowed to get kids\u0027 tickets to Highbury, so..."
+    },
+    {
+        "id":  "turn-102",
+        "chapterId":  "chap-2",
+        "chapterTitle":  "Chapter II • Core Discussion (19:19)",
+        "speaker":  "Stefano",
+        "time":  "19:38",
+        "html":  "So with a lower price..."
+    },
+    {
+        "id":  "turn-103",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "19:40",
+        "html":  "For free. For free?"
+    },
+    {
+        "id":  "turn-104",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "19:42",
+        "html":  "And for free wow..."
+    },
+    {
+        "id":  "turn-105",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "19:43",
+        "html":  "Yeah. Yeah. So we all used to go. If there was a home game when he got the tickets for maybe three or four years, he got free tickets. And we would get the train to Highbury. And because it was a Highbury and we would watch and he would have training the under sixteenens have training in Buckinghamshire, so they near Oxford, they it\u0027s not actually in London. So he would train in Buckinghamshire. And then on the weekends, if we could, we would go to the game, which was really nice."
+    },
+    {
+        "id":  "turn-106",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "19:19",
+        "html":  "Okay, wow, nice."
+    },
+    {
+        "id":  "turn-107",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "19:21",
+        "html":  "Really nice. Yes. Yes. That was really good..."
+    },
+    {
+        "id":  "turn-108",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "19:25",
+        "html":  "Now, I\u0027ve got a chance to get a free ticket to Como. This is an Italian thing, and because my girlfriend works in the logistics of the company, so just got two free tickets. Yeah. This year, the team has some games in the championship tournament. I watched the game with Como against Manchester United in Como. [Laughter]"
+    },
+    {
+        "id":  "turn-109",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "20:20",
+        "html":  "Wow. [Laughter]"
+    },
+    {
+        "id":  "turn-110",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "20:22",
+        "html":  "And the next one I think I\u0027ll attend will be the commo against PSG so the..."
+    },
+    {
+        "id":  "turn-111",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:37",
+        "html":  "That\u0027s a really..."
+    },
+    {
+        "id":  "turn-112",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "21:38",
+        "html":  "I think..."
+    },
+    {
+        "id":  "turn-113",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:38",
+        "html":  "Good puk. Very..."
+    },
+    {
+        "id":  "turn-114",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "21:39",
+        "html":  "Very interesting. Yeah. [Laughter]"
+    },
+    {
+        "id":  "turn-115",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:40",
+        "html":  "Yeah, a very nice pack. Very good. II2..."
+    },
+    {
+        "id":  "turn-116",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "21:44",
+        "html":  "And the strange thing is that the stadium is very close to the lake. So, and there is no roof, so the wind comes into the stadium. I think in the wind during the winter, it will be very struggling. [Laughter] Because, yeah, wind and cold weather. [Laughter] I think this is a mixture of very dangerous for the supporters."
+    },
+    {
+        "id":  "turn-117",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:21",
+        "html":  "Is this the most is this the famous lake? It\u0027s like very beautiful."
+    },
+    {
+        "id":  "turn-118",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "21:25",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-119",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:26",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-120",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "21:26",
+        "html":  "The Como lake. Yeah."
+    },
+    {
+        "id":  "turn-121",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:28",
+        "html":  "Yeah, w wow, \u003cspan class=\"vocab-mark\" data-vkey=\"absolutely\" onclick=\"inspectVocab(\u0027absolutely\u0027)\"\u003eabsolutely\u003c/span\u003e beautiful."
+    },
+    {
+        "id":  "turn-122",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "22:30",
+        "html":  "Very close. So the stadium is not so large because, yeah, you have no chance to increase the dimensions because it\u0027s very close to the lake, but it\u0027s all open all around. So the wind goes into... And is suffering. [Laughter]..."
+    },
+    {
+        "id":  "turn-123",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "22:58",
+        "html":  "Yes, I think the nice thing about the Vietnamese stadiums is that you can run around them. So... Yeah, so the stadiums in Vietnam, because they\u0027re communist, the way they think is that even though the stadium is owned by someone, it belongs to the people. So you go in the mornings and everyone is running around the track, even myself. You just run around to exercise. It\u0027s really nice in the state of... Yeah, in Vietnam..."
+    },
+    {
+        "id":  "turn-124",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:40",
+        "html":  "So you are afraid you can use it because they are..."
+    },
+    {
+        "id":  "turn-125",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:43",
+        "html":  "Yes..."
+    },
+    {
+        "id":  "turn-126",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:43",
+        "html":  "The... Yeah..."
+    },
+    {
+        "id":  "turn-127",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:44",
+        "html":  "The they have the circuit around the pitch."
+    },
+    {
+        "id":  "turn-128",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:47",
+        "html":  "The soer. Okay."
+    },
+    {
+        "id":  "turn-129",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:48",
+        "html":  "Yeah, and it\u0027s full, absolutely full."
+    },
+    {
+        "id":  "turn-130",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:52",
+        "html":  "Hey..."
+    },
+    {
+        "id":  "turn-131",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:53",
+        "html":  "Yeah, that\u0027s what I really like about Vietnam. Places like that are owned by a company, it doesn\u0027t matter, the people will still use it because it has a utility."
+    },
+    {
+        "id":  "turn-132",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:04",
+        "html":  "Okay. For free."
+    },
+    {
+        "id":  "turn-133",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:06",
+        "html":  "But for... Yes, for free. Yes, if you ask the security, they\u0027re called Balve in Vietnamese, they wear blue shirts. They will say no, but they\u0027ll..."
+    },
+    {
+        "id":  "turn-134",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:19",
+        "html":  "Now you can\u0027t answer."
+    },
+    {
+        "id":  "turn-135",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:20",
+        "html":  "You can\u0027t enter. But then at the same time, 200 people are going past him. [Laughter]..."
+    },
+    {
+        "id":  "turn-136",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "23:27",
+        "html":  "[Laughter] So they have no chance to stop the..."
+    },
+    {
+        "id":  "turn-137",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:30",
+        "html":  "Yeah, they allow it. They just say it. Yeah..."
+    },
+    {
+        "id":  "turn-138",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "24:33",
+        "html":  "Mause [Laughter]..."
+    },
+    {
+        "id":  "turn-139",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:35",
+        "html":  "I take them fruit. It\u0027s very normal to give security fruit."
+    },
+    {
+        "id":  "turn-140",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "24:41",
+        "html":  "To give them. Okay."
+    },
+    {
+        "id":  "turn-141",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:42",
+        "html":  "Yes..."
+    },
+    {
+        "id":  "turn-142",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "24:44",
+        "html":  "IG the..."
+    },
+    {
+        "id":  "turn-143",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:46",
+        "html":  "In fact, outside we have every building has security, and when I exit the security... To give me through all the time, it\u0027s to show you in Vietnam. I\u0027m sure it\u0027s the same in every country. You show that you like someone by giving them fruit. Food. And sometimes I will be talking to a Vietnamese person and they will be eating an apple. W they\u0027ll be..."
+    },
+    {
+        "id":  "turn-144",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "24:17",
+        "html":  "[Laughter] really?"
+    },
+    {
+        "id":  "turn-145",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:17",
+        "html":  "Eating an apple. And then they will realize that they like me because I\u0027m speaking Vietnamese. And then they will go like this, and they will give me..."
+    },
+    {
+        "id":  "turn-146",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "24:26",
+        "html":  "I give you..."
+    },
+    {
+        "id":  "turn-147",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:27",
+        "html":  "The fruit out of them..."
+    },
+    {
+        "id":  "turn-148",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "24:29",
+        "html":  "Already. My God..."
+    },
+    {
+        "id":  "turn-149",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "25:31",
+        "html":  "Yes, because I surprise them. No..."
+    },
+    {
+        "id":  "turn-150",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "25:36",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-151",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "25:37",
+        "html":  "I say, \"Indeed.\""
+    },
+    {
+        "id":  "turn-152",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "25:38",
+        "html":  "Thank you, but at least later [Laughter]..."
+    },
+    {
+        "id":  "turn-153",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "25:43",
+        "html":  "Yeah, I say, in Vietnamese, there\u0027s this expression called \"and D is to eat, and D is to go.\" But when you\u0027re at a dinner table, you tell people \"and D.\" It\u0027s like, \"Eat up.\" I say, \"Come... At... Andy eat up. Anita okay, but, yeah, it\u0027s very funny. Yeah, but I think, here I was thinking about it about who having dinner with people because here I have dinner with a lot of people. A lot. But there is the barrier of Vietnamese still. So sometimes, I can\u0027t get my point across. \u003cspan class=\"vocab-mark\" data-vkey=\"obviously\" onclick=\"inspectVocab(\u0027obviously\u0027)\"\u003eObviously\u003c/span\u003e, I\u0027m still working on it, and I was just thinking, who is the most interesting person in Vietnam? I\u0027ve had dinner with and..."
+    },
+    {
+        "id":  "turn-154",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "26:39",
+        "html":  "And what\u0027s the answer? [Laughter]..."
+    },
+    {
+        "id":  "turn-155",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:41",
+        "html":  "It \u003cspan class=\"vocab-mark\" data-vkey=\"definitely\" onclick=\"inspectVocab(\u0027definitely\u0027)\"\u003edefinitely\u003c/span\u003e is my girlfriend\u0027s father."
+    },
+    {
+        "id":  "turn-156",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "26:44",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-157",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:44",
+        "html":  "He was a child during the Vietnam War, and he\u0027s from who AI, which is in the center of Vietnam."
+    },
+    {
+        "id":  "turn-158",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "26:54",
+        "html":  "The war against the US."
+    },
+    {
+        "id":  "turn-159",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:56",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-160",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "26:57",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-161",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:58",
+        "html":  "And he\u0027s. When the war started, they did... They gave the children in his city an IQ test, and if you passed the IQ test, they would evacuate you out of the city. Yeah, so..."
+    },
+    {
+        "id":  "turn-162",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "26:19",
+        "html":  "To... Yeah, to avoid the bombs..."
+    },
+    {
+        "id":  "turn-163",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:21",
+        "html":  "So they only took the children that would become doctors."
+    },
+    {
+        "id":  "turn-164",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "26:26",
+        "html":  "With the II level of, mica."
+    },
+    {
+        "id":  "turn-165",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:29",
+        "html":  "Yes. So he moved to Hanoi, and he lived in communist tenement buildings and dorms with other doctors until he was 28. He was a fully trained doctor."
+    },
+    {
+        "id":  "turn-166",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "27:46",
+        "html":  "What? Okay."
+    },
+    {
+        "id":  "turn-167",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:49",
+        "html":  "And then he moved back. And to Huai after the war. And he\u0027s fully qualified. He hadn\u0027t seen his mother since he I\u0027d met his Loom, I\u0027ve met his mum, but, he hadn\u0027t been home to see his Loom in, I think 13 1415, sixt. How was it? Yeah, in so right 20 years 20..."
+    },
+    {
+        "id":  "turn-168",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "27:15",
+        "html":  "20 years."
+    },
+    {
+        "id":  "turn-169",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:17",
+        "html":  "Yes, then he became he retired as..."
+    },
+    {
+        "id":  "turn-170",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "27:21",
+        "html":  "Were they kept in touch with the phone or...?"
+    },
+    {
+        "id":  "turn-171",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:24",
+        "html":  "Yes..."
+    },
+    {
+        "id":  "turn-172",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "27:24",
+        "html":  "Yeah, just the..."
+    },
+    {
+        "id":  "turn-173",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:25",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-174",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "27:26",
+        "html":  "Okay. They could. They could..."
+    },
+    {
+        "id":  "turn-175",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:27",
+        "html":  "By mail."
+    },
+    {
+        "id":  "turn-176",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "27:28",
+        "html":  "Not meet..."
+    },
+    {
+        "id":  "turn-177",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:29",
+        "html":  "Yes... And, I have to tell you something about his mother as well, but that\u0027s..."
+    },
+    {
+        "id":  "turn-178",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "28:37",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-179",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "28:37",
+        "html":  "Another story. He retired as the head scientist for infectious control for Vietnam. He\u0027s retired now and still works, but he\u0027s retired. And, just stories he tells me at every dinner about this part of the country. What happened is absolutely amazing. And sometimes I\u0027m with him. His name\u0027s Chu Yan, but I call him... It means older, my dad\u0027s older brother. It back... It means... My girlfriend says he hasn\u0027t even told me that story before because he\u0027s very not with me, but he\u0027s very... Doesn\u0027t talk with me. He tells me everything."
+    },
+    {
+        "id":  "turn-180",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:33",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-181",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:34",
+        "html":  "Which is lovely, really nice. Yes..."
+    },
+    {
+        "id":  "turn-182",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:38",
+        "html":  "So you are part of the..."
+    },
+    {
+        "id":  "turn-183",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:38",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-184",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:39",
+        "html":  "Family now, [Laughter]?"
+    },
+    {
+        "id":  "turn-185",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:42",
+        "html":  "I don\u0027t know if I told you we sleep in one when we visit, everybody sleeps in one room, right? Everybody..."
+    },
+    {
+        "id":  "turn-186",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:50",
+        "html":  "[Laughter] My God..."
+    },
+    {
+        "id":  "turn-187",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:54",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-188",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:55",
+        "html":  "Is it easy?"
+    },
+    {
+        "id":  "turn-189",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:58",
+        "html":  "Yes..."
+    },
+    {
+        "id":  "turn-190",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:59",
+        "html":  "Strange, it\u0027s difficult. Yeah, to get used to..."
+    },
+    {
+        "id":  "turn-191",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:03",
+        "html":  "Y we..."
+    },
+    {
+        "id":  "turn-192",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:03",
+        "html":  "This kind of..."
+    },
+    {
+        "id":  "turn-193",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:05",
+        "html":  "Y yeah..."
+    },
+    {
+        "id":  "turn-194",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:05",
+        "html":  "Behavior. [Laughter]..."
+    },
+    {
+        "id":  "turn-195",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:06",
+        "html":  "They love it, because everyone... The wives, the husbands, the children. So everyone is in one room on... I wouldn\u0027t call it a bed. What it is..."
+    },
+    {
+        "id":  "turn-196",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "29:22",
+        "html":  "Hey..."
+    },
+    {
+        "id":  "turn-197",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:22",
+        "html":  "It\u0027s like a structure, like it\u0027s a huge bed, but they could add more to... It. Yeah, and you... Yes."
+    },
+    {
+        "id":  "turn-198",
+        "chapterId":  "chap-3",
+        "chapterTitle":  "Chapter III • Deep Dive \u0026 Vocabulary (30:26)",
+        "speaker":  "Stefano",
+        "time":  "30:33",
+        "html":  "[Laughter] my go..."
+    },
+    {
+        "id":  "turn-199",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:34",
+        "html":  "I... Yeah. But..."
+    },
+    {
+        "id":  "turn-200",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "30:36",
+        "html":  "And who now stop switch off the light everyone sleeping..."
+    },
+    {
+        "id":  "turn-201",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:44",
+        "html":  "W well, to..."
+    },
+    {
+        "id":  "turn-202",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "30:46",
+        "html":  "Is the father so..."
+    },
+    {
+        "id":  "turn-203",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:49",
+        "html":  "The ladies... Normally, yeah, she knew my sister-in-law, she\u0027s..."
+    },
+    {
+        "id":  "turn-204",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "30:57",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-205",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:58",
+        "html":  "In control, really of the family. Yes."
+    },
+    {
+        "id":  "turn-206",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "30:00",
+        "html":  "My [Laughter]..."
+    },
+    {
+        "id":  "turn-207",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:02",
+        "html":  "Have you ever heard of bird\u0027s nest soup?"
+    },
+    {
+        "id":  "turn-208",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "30:08",
+        "html":  "Burn ne."
+    },
+    {
+        "id":  "turn-209",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:10",
+        "html":  "So it\u0027s a. It\u0027s a delicacy. A delicacy? I don\u0027t think it\u0027s a delicacy, but in China and Vietnam, it\u0027s a delicacy. It\u0027s when a bird that lives in a cave, they fly into a cave and..."
+    },
+    {
+        "id":  "turn-210",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "30:25",
+        "html":  "Hey."
+    },
+    {
+        "id":  "turn-211",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:26",
+        "html":  "Using their saliva, they make a nest for their chicks. The Vietnamese and Chinese believe it gives you powers, it heals you and so, one day I\u0027m in a Chinese house, and his house is very tall. The houses in Vietnam are very tall. Yeah, cause..."
+    },
+    {
+        "id":  "turn-212",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "31:50",
+        "html":  "I thought the oppos it..."
+    },
+    {
+        "id":  "turn-213",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "31:53",
+        "html":  "In the city. I should say. In a city, they\u0027re very tall. And I was going upstairs, and I went past Fung\u0027s old bedroom, where she grew up, still the same, untouched. And I went further up and I could smell this horrible smell. And I said to Vong, you know, hoi Len, it smells up there. And she goes, my father has a bird cave. And I was, say, what? And he has a whole dark ca room. Like a cave. And every night he plays."
+    },
+    {
+        "id":  "turn-214",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "32:34",
+        "html":  "Several severals..."
+    },
+    {
+        "id":  "turn-215",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "32:35",
+        "html":  "Yes. They fly in a whole flock of birds and they make nests using their saliva, and then he harvests the nest, then he makes them into he boils them and he adds ginger and sugar. That\u0027s what it really tastes like. Ginger and sugar with the nest, and then we eat it, yeah, and then we eat the nest like a soup, yeah, bird\u0027s nest soup, and it\u0027s like..."
+    },
+    {
+        "id":  "turn-216",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "32:10",
+        "html":  "Have you eaten...?"
+    },
+    {
+        "id":  "turn-217",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "32:11",
+        "html":  "Yeah. Many times... Yeah."
+    },
+    {
+        "id":  "turn-218",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "32:13",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-219",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "32:14",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-220",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "32:14",
+        "html":  "It\u0027s good..."
+    },
+    {
+        "id":  "turn-221",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "32:16",
+        "html":  "It\u0027s fun. I wouldn\u0027t say it\u0027s good..."
+    },
+    {
+        "id":  "turn-222",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "32:18",
+        "html":  "Fine, it\u0027s..."
+    },
+    {
+        "id":  "turn-223",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "32:18",
+        "html":  "It\u0027s fun, it has a weird texture. Yeah... But it tastes like ginger tea sugar, yeah, very nice ginger tea, yes, yeah. So, yeah, unusual..."
+    },
+    {
+        "id":  "turn-224",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:34",
+        "html":  "Well, strange..."
+    },
+    {
+        "id":  "turn-225",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:35",
+        "html":  "Yeah, but for me, yes, but smells."
+    },
+    {
+        "id":  "turn-226",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:41",
+        "html":  "Very unusual. To sleep together."
+    },
+    {
+        "id":  "turn-227",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:44",
+        "html":  "Well, I used to rent, sorry, rents as when I first started visiting them."
+    },
+    {
+        "id":  "turn-228",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:50",
+        "html":  "Can you get up and sell the same time?"
+    },
+    {
+        "id":  "turn-229",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:53",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-230",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:53",
+        "html":  "No."
+    },
+    {
+        "id":  "turn-231",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:55",
+        "html":  "I get up last."
+    },
+    {
+        "id":  "turn-232",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:58",
+        "html":  "The [Laughter] long list."
+    },
+    {
+        "id":  "turn-233",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:01",
+        "html":  "Because, I will be honest, when I visit them, it\u0027s a rule that the men drink..."
+    },
+    {
+        "id":  "turn-234",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:12",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-235",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:12",
+        "html":  "So what happens is we drink, but it\u0027s very..."
+    },
+    {
+        "id":  "turn-236",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "33:19",
+        "html":  "You are Dr."
+    },
+    {
+        "id":  "turn-237",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "33:20",
+        "html":  "No, I\u0027m not drunk at all. This is the problem. So what happens is it\u0027s a very formal occasion. It\u0027s not like in the West where we\u0027re drinking. In England, it\u0027s very formal. You wait for the elder to drink and you... It\u0027s like a ritual. The problem is I\u0027m English, and so I have a high tolerance to alcohol..."
+    },
+    {
+        "id":  "turn-238",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "34:48",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-239",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "34:49",
+        "html":  "And they\u0027re Vietnamese..."
+    },
+    {
+        "id":  "turn-240",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "34:53",
+        "html":  "[Laughter] I know."
+    },
+    {
+        "id":  "turn-241",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "34:55",
+        "html":  "So what happens is Chu Yen will be dead. He\u0027ll be on the floor, and he will be because it\u0027s in their society, it\u0027s seen as a weakness to not be able to outdrink someone. So I don\u0027t... I don\u0027t mind... But they really mind... And I would be like, \"I need to go to bed,\" and they\u0027re like, \"No, we need to drink more than you...\""
+    },
+    {
+        "id":  "turn-242",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "34:20",
+        "html":  "To keep on... Okay..."
+    },
+    {
+        "id":  "turn-243",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "34:22",
+        "html":  "And they\u0027re not drinking that much. They get drunk so easily, and. But they won\u0027t let me go to bed, and \u003cspan class=\"vocab-mark\" data-vkey=\"especially\" onclick=\"inspectVocab(\u0027especially\u0027)\"\u003eespecially\u003c/span\u003e if there\u0027s people older than me. I..."
+    },
+    {
+        "id":  "turn-244",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "35:33",
+        "html":  "So they want you to kill yourself to die..."
+    },
+    {
+        "id":  "turn-245",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:37",
+        "html":  "Die. Yeah. And I when the when Chu Yan goes to bed. And then maybe when some other elders go to bed, when there\u0027s the ones I can joke around. I will say to them. My mum drinks more than you. You know, and it\u0027s true."
+    },
+    {
+        "id":  "turn-246",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "35:58",
+        "html":  "It true..."
+    },
+    {
+        "id":  "turn-247",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:58",
+        "html":  "But they drink so little. Yes, it\u0027s funny."
+    },
+    {
+        "id":  "turn-248",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "35:04",
+        "html":  "A super-coke or wine..."
+    },
+    {
+        "id":  "turn-249",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:06",
+        "html":  "No, they drink the they drink beer very weak beer..."
+    },
+    {
+        "id":  "turn-250",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "35:11",
+        "html":  "With beer..."
+    },
+    {
+        "id":  "turn-251",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:11",
+        "html":  "4%, yeah, very weak. And they share one can, they share the, it\u0027s very..."
+    },
+    {
+        "id":  "turn-252",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "35:17",
+        "html":  "To. Okay..."
+    },
+    {
+        "id":  "turn-253",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:19",
+        "html":  "Yeah. So, for example, three of us will have one small can, and we..."
+    },
+    {
+        "id":  "turn-254",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "35:23",
+        "html":  "For three. For three of you."
+    },
+    {
+        "id":  "turn-255",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:26",
+        "html":  "Yes. And they will be. They will start to get drunk, and they will start to fall over. And I\u0027m like... Yeah, I."
+    },
+    {
+        "id":  "turn-256",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "36:38",
+        "html":  "And you. Stay there. [Laughter]."
+    },
+    {
+        "id":  "turn-257",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:40",
+        "html":  "Yeah. The thing is, I can\u0027t go to bed until everyone... Because of the \u003cspan class=\"vocab-mark\" data-vkey=\"culture\" onclick=\"inspectVocab(\u0027culture\u0027)\"\u003eculture\u003c/span\u003e, everyone older than me has to go to bed before me. I cannot leave, and neither can anyone younger than me. So leave before me. So I really have to wait for Angfam. Angfam is the senior brother of the family. And yeah, so I cannot... He\u0027s older than me and it doesn\u0027t matter if he\u0027s older than me because his sister is younger than him. So I would have to follow his direction because of the hierarchy. I can\u0027t do anything until Angfam does something. Yes and Angfam..."
+    },
+    {
+        "id":  "turn-258",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "36:24",
+        "html":  "I have to wait for Angfam to click. [Laughter]..."
+    },
+    {
+        "id":  "turn-259",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:29",
+        "html":  "Yeah, I can\u0027t. I have to wait for him to die. Yeah. Well..."
+    },
+    {
+        "id":  "turn-260",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "37:33",
+        "html":  "Toe [Laughter]..."
+    },
+    {
+        "id":  "turn-261",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:35",
+        "html":  "You know, I it\u0027s very interesting, but then by the time, bet by the time it\u0027s over, it\u0027s 01:00 in the morning, and in Vietnam, they wake up at 05:00 am..."
+    },
+    {
+        "id":  "turn-262",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "37:51",
+        "html":  "Okay, fi AM. Well..."
+    },
+    {
+        "id":  "turn-263",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:52",
+        "html":  "Yes. Yeah. It is. Yes."
+    },
+    {
+        "id":  "turn-264",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "37:55",
+        "html":  "It\u0027s impossible for me now. Tomorrow, I think I have to wake up at 5:00 because my girlfriend has gotten a flight to Romania and..."
+    },
+    {
+        "id":  "turn-265",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:08",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-266",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "37:08",
+        "html":  "With a friend, so I\u0027ll go to the station, the train station. Just to... So five. My God, because I used to wake up at 7:30 or less. So for me, it is impossible..."
+    },
+    {
+        "id":  "turn-267",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:40",
+        "html":  "Yeah, here they have, propa, you know, propaganda towers."
+    },
+    {
+        "id":  "turn-268",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "38:48",
+        "html":  "This proper..."
+    },
+    {
+        "id":  "turn-269",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:49",
+        "html":  "Proper like news, the news..."
+    },
+    {
+        "id":  "turn-270",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "38:52",
+        "html":  "News. Okay..."
+    },
+    {
+        "id":  "turn-271",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:53",
+        "html":  "At five at 05:00 am... Yeah..."
+    },
+    {
+        "id":  "turn-272",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "38:57",
+        "html":  "So we receive fsh news."
+    },
+    {
+        "id":  "turn-273",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:01",
+        "html":  "O on, yeah, so it\u0027ll be, you know, it\u0027ll be on, it\u0027s on speakers on the streets, so it would be like they wake..."
+    },
+    {
+        "id":  "turn-274",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "38:09",
+        "html":  "They wake you up."
+    },
+    {
+        "id":  "turn-275",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:10",
+        "html":  "Everyone up, yeah. Good morning."
+    },
+    {
+        "id":  "turn-276",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "38:11",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-277",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:11",
+        "html":  "Comrade. The welcome... I know the guy that does it here. I met him, I got his number, I don\u0027t know why, just in case."
+    },
+    {
+        "id":  "turn-278",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "38:21",
+        "html":  "So Kle, [Laughter] it\u0027s a good choice."
+    },
+    {
+        "id":  "turn-279",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:30",
+        "html":  "Yeah, but, at 05:00 am yeah, at 05:00 am I everyone is outside exercising."
+    },
+    {
+        "id":  "turn-280",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "39:39",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-281",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:40",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-282",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "39:40",
+        "html":  "But it\u0027s it bit too early..."
+    },
+    {
+        "id":  "turn-283",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:42",
+        "html":  "Yes. And the in my area, in this area, it\u0027s volleyball. Is the sport a volleyball? M... Yes, about maybe I will take a picture at 05:00 am and I will show you it. They will be having... Loads of games being played, lots of games."
+    },
+    {
+        "id":  "turn-284",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "39:06",
+        "html":  "Really? Nice..."
+    },
+    {
+        "id":  "turn-285",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:09",
+        "html":  "Yeah, it\u0027s nice. It\u0027s nice."
+    },
+    {
+        "id":  "turn-286",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "39:11",
+        "html":  "I think that when you get used to waking up so early..."
+    },
+    {
+        "id":  "turn-287",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:16",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-288",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "39:18",
+        "html":  "Become normal. My opinion..."
+    },
+    {
+        "id":  "turn-289",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:20",
+        "html":  "Yes. And I when I lived in the Caribbean, before this, well..."
+    },
+    {
+        "id":  "turn-290",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "39:29",
+        "html":  "5 is fine because yeah, you got the c yeah, the I GA not very nice [Laughter]..."
+    },
+    {
+        "id":  "turn-291",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:37",
+        "html":  "Yeah, I woke up at five because of the sun. It\u0027s so hot. Yeah, but it\u0027s different. We\u0027ll get up at five to do nothing, you know?"
+    },
+    {
+        "id":  "turn-292",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:51",
+        "html":  "But yeah..."
+    },
+    {
+        "id":  "turn-293",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:52",
+        "html":  "Yeah, it was pretty nice."
+    },
+    {
+        "id":  "turn-294",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:54",
+        "html":  "It\u0027s \u003cspan class=\"vocab-mark\" data-vkey=\"comfortable\" onclick=\"inspectVocab(\u0027comfortable\u0027)\"\u003ecomfortable\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-295",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:56",
+        "html":  "Yeah, and I yeah..."
+    },
+    {
+        "id":  "turn-296",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:01",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-297",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:02",
+        "html":  "I think, the. Did I tell you I\u0027m going to China?"
+    },
+    {
+        "id":  "turn-298",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:07",
+        "html":  "Yeah, you\u0027re with..."
+    },
+    {
+        "id":  "turn-299",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:08",
+        "html":  "Yes. I..."
+    },
+    {
+        "id":  "turn-300",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:10",
+        "html":  "Motorbike... No, in motorbiking..."
+    },
+    {
+        "id":  "turn-301",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:12",
+        "html":  "Just. I just finalized everything, so e tomorrow I..."
+    },
+    {
+        "id":  "turn-302",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:18",
+        "html":  "I agree..."
+    },
+    {
+        "id":  "turn-303",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:18",
+        "html":  "Will, what will I do tomorrow? I will..."
+    },
+    {
+        "id":  "turn-304",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:23",
+        "html":  "Read tomorrow you know..."
+    },
+    {
+        "id":  "turn-305",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:25",
+        "html":  "No. So tomorrow I will prepare the motorbike."
+    },
+    {
+        "id":  "turn-306",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "40:28",
+        "html":  "I was playing out okay, so I stopped preparing..."
+    },
+    {
+        "id":  "turn-307",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:30",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-308",
+        "chapterId":  "chap-4",
+        "chapterTitle":  "Chapter IV • Wrap-Up \u0026 Next Steps (41:00)",
+        "speaker":  "Stefano",
+        "time":  "41:32",
+        "html":  "The motorbike care."
+    },
+    {
+        "id":  "turn-309",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:33",
+        "html":  "I have a friend over from France, and I think she wants to have a beer, I think. But I think I will have a beer with her tomorrow, I think."
+    },
+    {
+        "id":  "turn-310",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:45",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-311",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:45",
+        "html":  "Yeah, she, we met in Thailand."
+    },
+    {
+        "id":  "turn-312",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:48",
+        "html":  "I shall beer..."
+    },
+    {
+        "id":  "turn-313",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:50",
+        "html":  "No. No. This lady. This lady can drink, she..."
+    },
+    {
+        "id":  "turn-314",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:55",
+        "html":  "I can do..."
+    },
+    {
+        "id":  "turn-315",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:56",
+        "html":  "O yes, she has four older..."
+    },
+    {
+        "id":  "turn-316",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:00",
+        "html":  "To get used..."
+    },
+    {
+        "id":  "turn-317",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:00",
+        "html":  "Brothers, yes, so she can drink. Well..."
+    },
+    {
+        "id":  "turn-318",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:06",
+        "html":  "So she\u0027s great."
+    },
+    {
+        "id":  "turn-319",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:08",
+        "html":  "Yeah, so, we\u0027ll see why she\u0027s here, and I..."
+    },
+    {
+        "id":  "turn-320",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:14",
+        "html":  "Which percentage of fer color as the..."
+    },
+    {
+        "id":  "turn-321",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:17",
+        "html":  "She can drink. She will not drink beer, she will drink... Rum. She will drink rum."
+    },
+    {
+        "id":  "turn-322",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "41:29",
+        "html":  "7 sevent 70 degrees no 5050..."
+    },
+    {
+        "id":  "turn-323",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:32",
+        "html":  "Yes, well, 80. She\u0027ll drink 80 proof or 40 a bv 40% or 80 proof."
+    },
+    {
+        "id":  "turn-324",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "42:42",
+        "html":  "For percent. Okay..."
+    },
+    {
+        "id":  "turn-325",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:43",
+        "html":  "Yes, she likes to drink rum. She doesn\u0027t like wine, which I find more and more young French people not drinking wine. I find..."
+    },
+    {
+        "id":  "turn-326",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "42:56",
+        "html":  "No, I like wine rams. Well, I like it, but I\u0027m not used to drinking rum, but I like it."
+    },
+    {
+        "id":  "turn-327",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:09",
+        "html":  "I yeah, me, so."
+    },
+    {
+        "id":  "turn-328",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "42:10",
+        "html":  "Rum and Coca-Cola..."
+    },
+    {
+        "id":  "turn-329",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:17",
+        "html":  "I love mejitos."
+    },
+    {
+        "id":  "turn-330",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "42:18",
+        "html":  "When I was younger. When I was younger I used to drink Kubarimm..."
+    },
+    {
+        "id":  "turn-331",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:23",
+        "html":  "Yes, I love Cuba Libre, absolutely love it. Yeah, and have you ever had a daiquiri, a classic daiquiri? A daiquiri is a classic rum cocktail with lime and sugar."
+    },
+    {
+        "id":  "turn-332",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "43:44",
+        "html":  "He the name is Rak."
+    },
+    {
+        "id":  "turn-333",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "43:50",
+        "html":  "Sorry. I may say it incorrectly because it\u0027s Spanish, but it\u0027s either daiquiri or daiquiri. In England, we call it a daiquiri. Yeah, sorry..."
+    },
+    {
+        "id":  "turn-334",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "43:03",
+        "html":  "I it..."
+    },
+    {
+        "id":  "turn-335",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "43:03",
+        "html":  "I love it. Yeah, I think it\u0027s the best drink to wake me up."
+    },
+    {
+        "id":  "turn-336",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "43:10",
+        "html":  "Really [Laughter]..."
+    },
+    {
+        "id":  "turn-337",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "43:12",
+        "html":  "Yeah, yes, it\u0027s so cold. The rum, the sugar, I think, is great. Yes, my..."
+    },
+    {
+        "id":  "turn-338",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "43:23",
+        "html":  "A lot of memories I remember the past probably my children. No, I don\u0027t know because they prefer something..."
+    },
+    {
+        "id":  "turn-339",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "44:40",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-340",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "44:40",
+        "html":  "My daughter preferred gin. She used to drink gin during the hour when she went out and just one she told me that she drinks just one but I\u0027m not so sure. [Laughter]."
+    },
+    {
+        "id":  "turn-341",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "44:04",
+        "html":  "Maybe if it\u0027s anything like my sister\u0027s one per round, one gin and... T per round. Yeah, it\u0027s normal, I think. Yeah, maybe one day I... Have you...? Let me make you a drink. I\u0027m very good at making drinks. Yes. So, if I\u0027m ever... In Italy or you\u0027re in Vietnam, I would love to make you a drink."
+    },
+    {
+        "id":  "turn-342",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "44:29",
+        "html":  "Come here [Laughter]..."
+    },
+    {
+        "id":  "turn-343",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "45:32",
+        "html":  "Yeah. And my..."
+    },
+    {
+        "id":  "turn-344",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "45:34",
+        "html":  "For sure."
+    },
+    {
+        "id":  "turn-345",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "45:34",
+        "html":  "G my gon gentonics are amazing. Yes."
+    },
+    {
+        "id":  "turn-346",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "45:39",
+        "html":  "Really. You can prepare the. Yeah..."
+    },
+    {
+        "id":  "turn-347",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "45:43",
+        "html":  "Because I used to own cocktail bars."
+    },
+    {
+        "id":  "turn-348",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "45:47",
+        "html":  "You attended the school..."
+    },
+    {
+        "id":  "turn-349",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "45:49",
+        "html":  "Well, w well, yeah, so I used to own cocktail bars in England. And so we used to and we were very good, my staff and myself. Yes, we had, yeah, we had no menu. So we said the..."
+    },
+    {
+        "id":  "turn-350",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "45:07",
+        "html":  "So everyone can ask you what everything is okay..."
+    },
+    {
+        "id":  "turn-351",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "45:13",
+        "html":  "Everything. We had one price, so it doesn\u0027t matter..."
+    },
+    {
+        "id":  "turn-352",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "45:18",
+        "html":  "For all the old dreams..."
+    },
+    {
+        "id":  "turn-353",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "45:20",
+        "html":  "Exactly. So instead of thinking, \"This is more expensive, is it better?\" We didn\u0027t want that. We just wanted every..."
+    },
+    {
+        "id":  "turn-354",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "45:29",
+        "html":  "You can ask a question."
+    },
+    {
+        "id":  "turn-355",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:32",
+        "html":  "Everything. Yes, yeah, but..."
+    },
+    {
+        "id":  "turn-356",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:33",
+        "html":  "Wow, what is the place because..."
+    },
+    {
+        "id":  "turn-357",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:38",
+        "html":  "I sold it, and that\u0027s how..."
+    },
+    {
+        "id":  "turn-358",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:40",
+        "html":  "You sold it."
+    },
+    {
+        "id":  "turn-359",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:40",
+        "html":  "I because of Covid. Because of Covid?"
+    },
+    {
+        "id":  "turn-360",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:45",
+        "html":  "Okay, sorry to close it."
+    },
+    {
+        "id":  "turn-361",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:47",
+        "html":  "Yeah, I..."
+    },
+    {
+        "id":  "turn-362",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:47",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-363",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:49",
+        "html":  "We... I had lots of stuff in my places, plus the building, and then I was... You could imagine, with my normal job and then owning restaurants. I was never sleeping. I wasn\u0027t sick, but I was putting on lots of..."
+    },
+    {
+        "id":  "turn-364",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:05",
+        "html":  "So I used to work in the office during the day and in the bar at night."
+    },
+    {
+        "id":  "turn-365",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:13",
+        "html":  "Yes. And, the..."
+    },
+    {
+        "id":  "turn-366",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:16",
+        "html":  "So 24 hours..."
+    },
+    {
+        "id":  "turn-367",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:19",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-368",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "46:19",
+        "html":  "Without sleeping? [Laughter]..."
+    },
+    {
+        "id":  "turn-369",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:21",
+        "html":  "And, the worst thing is and the best thing is when someone wants to buy you a drink in your own bar, so..."
+    },
+    {
+        "id":  "turn-370",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "47:31",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-371",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:31",
+        "html":  "You\u0027re like..."
+    },
+    {
+        "id":  "turn-372",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "47:32",
+        "html":  "Great."
+    },
+    {
+        "id":  "turn-373",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:33",
+        "html":  "Yes. Yeah, and you build the atmosphere. In my bars, everybody sat at the bar. Everybody. The bar is shaped like this. Sorry. I make the bars so everyone is around the bartender because instead of having separate tables, people are... One group at the bar. So it would look like this. So a normal bar is like this. Okay? You have chairs, but..."
+    },
+    {
+        "id":  "turn-374",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "47:13",
+        "html":  "Okay, so..."
+    },
+    {
+        "id":  "turn-375",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:14",
+        "html":  "That\u0027s a normal bar. That\u0027s a normal bar, so..."
+    },
+    {
+        "id":  "turn-376",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "47:16",
+        "html":  "You serve..."
+    },
+    {
+        "id":  "turn-377",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:17",
+        "html":  "People sit at the bar..."
+    },
+    {
+        "id":  "turn-378",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "47:19",
+        "html":  "The drinks."
+    },
+    {
+        "id":  "turn-379",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:20",
+        "html":  "But if you\u0027re sitting here, if you\u0027re these people, this person cannot see this person they can\u0027t see, and it\u0027s very hard. So I build my bars like this."
+    },
+    {
+        "id":  "turn-380",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:36",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-381",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:37",
+        "html":  "So what happens is that the people are like this."
+    },
+    {
+        "id":  "turn-382",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:44",
+        "html":  "Can see the okay..."
+    },
+    {
+        "id":  "turn-383",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:47",
+        "html":  "And then around the corner..."
+    },
+    {
+        "id":  "turn-384",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:49",
+        "html":  "So they can..."
+    },
+    {
+        "id":  "turn-385",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:51",
+        "html":  "See, everybody can see each other..."
+    },
+    {
+        "id":  "turn-386",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:53",
+        "html":  "We can see each other. Okay..."
+    },
+    {
+        "id":  "turn-387",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:55",
+        "html":  "And then the bartenders, they."
+    },
+    {
+        "id":  "turn-388",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:57",
+        "html":  "I can..."
+    },
+    {
+        "id":  "turn-389",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:58",
+        "html":  "So, yeah, they speak to everybody. It\u0027s a very..."
+    },
+    {
+        "id":  "turn-390",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:00",
+        "html":  "To everybody."
+    },
+    {
+        "id":  "turn-391",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:01",
+        "html":  "Social bar. Yes, it\u0027s... We will have queues. People would be like, \"We want to come in because it\u0027s a very social bar. It\u0027s like if you\u0027re at the bar, everyone\u0027s in the same conversation."
+    },
+    {
+        "id":  "turn-392",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:15",
+        "html":  "So it can be useful for singles."
+    },
+    {
+        "id":  "turn-393",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:19",
+        "html":  "Yes. Well, that that\u0027s my idea is that everyone goes to a bar to have sex, they want to yet to meet people, right?"
+    },
+    {
+        "id":  "turn-394",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "48:29",
+        "html":  "To meet."
+    },
+    {
+        "id":  "turn-395",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:30",
+        "html":  "Yeah, so the bartenders... That\u0027s why the bars are like this because, if you\u0027re a guy at the bar and you\u0027re part of a group, you\u0027re not by yourself. Girls like you more, right? Girls would be like, \"This is not a random guy. He\u0027s part of this community of the bar and everyone.\" Even my uncle."
+    },
+    {
+        "id":  "turn-396",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "49:52",
+        "html":  "So you can meet people more than one time? Several times."
+    },
+    {
+        "id":  "turn-397",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "49:55",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-398",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "49:56",
+        "html":  "Times. Okay..."
+    },
+    {
+        "id":  "turn-399",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "49:57",
+        "html":  "And then just the last..."
+    },
+    {
+        "id":  "turn-400",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "49:59",
+        "html":  "The same people."
+    },
+    {
+        "id":  "turn-401",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "49:00",
+        "html":  "Exactly. And then what I do is this is the outside of the building, for example. So floor one, floor two, floor three, and what happens is on floor one has this bar, but floor two has a secret bar. You can\u0027t see it, so what? The top one has... You can dance here. So what happens is you come here on your first visit, or you come here and you meet people and then you have a few drinks and then you go to this floor, and then it\u0027s 12:00 at night, one o\u0027clock, and we start to close this part. This one\u0027s closed first, then this one closes next. But the people that are really cool, that are really nice, we say to them, \"We really love your patronage tonight. We would love you to join us for a...\""
+    },
+    {
+        "id":  "turn-402",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "50:56",
+        "html":  "And then I second floor..."
+    },
+    {
+        "id":  "turn-403",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "50:58",
+        "html":  "And they come back..."
+    },
+    {
+        "id":  "turn-404",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "50:59",
+        "html":  "To keep on the. Yeah. Wow."
+    },
+    {
+        "id":  "turn-405",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "50:01",
+        "html":  "And the energy is a different energy because it has all the people, all our great customers, all the chefs, owners of other bars, and business owners. So it has a unique journey. So you\u0027re in psychology, when you want to date someone, when you meet them at a bar, you want to move with them, and then..."
+    },
+    {
+        "id":  "turn-406",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "50:26",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-407",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "50:26",
+        "html":  "You have this unique experience."
+    },
+    {
+        "id":  "turn-408",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "50:28",
+        "html":  "Enjoy the full..."
+    },
+    {
+        "id":  "turn-409",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "50:30",
+        "html":  "Exactly. So people really hook up and date in our bars because they have these \u003cspan class=\"vocab-mark\" data-vkey=\"incredible\" onclick=\"inspectVocab(\u0027incredible\u0027)\"\u003eincredible\u003c/span\u003e nights where they\u0027re moving around and seeing new things. The big thing missing on this floor, they miss it. So they think they\u0027ve seen the whole building, but then when..."
+    },
+    {
+        "id":  "turn-410",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "51:47",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-411",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "51:47",
+        "html":  "They come here, they\u0027re like, \"Whoa. Wow.\""
+    },
+    {
+        "id":  "turn-412",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "51:50",
+        "html":  "Wow in another place."
+    },
+    {
+        "id":  "turn-413",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "51:51",
+        "html":  "Yeah. It was..."
+    },
+    {
+        "id":  "turn-414",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "51:53",
+        "html":  "Great."
+    },
+    {
+        "id":  "turn-415",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "51:53",
+        "html":  "Another time. It was another time, but yeah, maybe again."
+    },
+    {
+        "id":  "turn-416",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "51:56",
+        "html":  "Yeah, we discuss..."
+    },
+    {
+        "id":  "turn-417",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "51:57",
+        "html":  "Yeah. Okay, thank you very much, Steppano."
+    },
+    {
+        "id":  "turn-418",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "51:01",
+        "html":  "[Laughter] Next. Thank you."
+    },
+    {
+        "id":  "turn-419",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "51:02",
+        "html":  "Yeah, I have a love..."
+    },
+    {
+        "id":  "turn-420",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Stefano",
+        "time":  "51:03",
+        "html":  "Bye."
+    },
+    {
+        "id":  "turn-421",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "51:03",
+        "html":  "It either. Goodbye next time, yeah."
+    }
+];
+    const STUDENT_STRENGTHS = [
+    {
+        "time":  "🕒 00:11",
+        "phrase":  "Natural Spoken Fluency",
+        "desc":  "Expressed ideas clearly in real-time conversation at 00:11.",
+        "quote":  "Stefano: \"Yeah. Because today it was a mixture between the monthly closing and the budgeting process. So I expressed several times to contac...\""
+    },
+    {
+        "time":  "🕒 16:42",
+        "phrase":  "Natural Spoken Fluency",
+        "desc":  "Expressed ideas clearly in real-time conversation at 16:42.",
+        "quote":  "Stefano: \"Yeah, in the pa. Yeah, from experience, I hadn\u0027t, many chances to discuss with my father because it was a very old fashioned, fath...\""
+    },
+    {
+        "time":  "🕒 36:24",
+        "phrase":  "Natural Spoken Fluency",
+        "desc":  "Expressed ideas clearly in real-time conversation at 36:24.",
+        "quote":  "Stefano: \"I have to wait for Angfam to click. [Laughter]...\""
+    },
+    {
+        "time":  "🕒 49:52",
+        "phrase":  "Natural Spoken Fluency",
+        "desc":  "Expressed ideas clearly in real-time conversation at 49:52.",
+        "quote":  "Stefano: \"So you can meet people more than one time? Several times.\""
+    }
+];
+    const GENTLE_POLISHES = [
+    {
+        "topic":  "Natural Connectors",
+        "said":  "Linking ideas quickly in conversation",
+        "natural":  "Use \u0027actually\u0027, \u0027honestly\u0027, and \u0027fair enough\u0027 to buy thinking time.",
+        "why":  "Natural discourse markers keep speech smooth without rushing."
+    },
+    {
+        "topic":  "Phrasal Verbs in Speech",
+        "said":  "Formal single-word verbs",
+        "natural":  "Mix in \u0027figure out\u0027, \u0027sort out\u0027, and \u0027catch up\u0027.",
+        "why":  "Native speakers rely heavily on phrasal verbs in everyday conversation."
+    }
+];
+    const ASR_FIXES = {
+    "time":  "00:00",
+    "speaker":  "Note-taker",
+    "wrong":  "Preply",
+    "right":  "Preply",
+    "note":  "Automated speech-to-text transcript synced from Krisp AI."
+};
+    const CULTURAL_PLACES = {
+    "meta":  "11-05-2026",
+    "badge":  "Lesson Overview",
+    "title":  "Full Session Transcript \u0026 Vocabulary",
+    "desc":  "Complete speaker-labeled transcript synced from Krisp AI with 421 speaking turns and 12 highlighted B2–C2 vocabulary items.",
+    "quote":  "\"Practice reviewing 5 highlighted words from today\u0027s conversation before our next class.\"",
+    "tags":  [
+                 "transcript",
+                 "vocabulary",
+                 "fluency"
+             ]
+};
+    const QUIZ_QUESTIONS = [
+    {
+        "q":  "1. Which word or phrase from today\u0027s lesson means: \"In a way that is easy to see or understand.\"?",
+        "options":  [
+                        "obviously",
+                        "absolutely",
+                        "completely"
+                    ],
+        "correct":  0,
+        "explain":  "\u0027obviously\u0027 (B2) — In a way that is easy to see or understand."
+    },
+    {
+        "q":  "2. Which word or phrase from today\u0027s lesson means: \"Completely and without any doubt.\"?",
+        "options":  [
+                        "absolutely",
+                        "completely",
+                        "especially"
+                    ],
+        "correct":  0,
+        "explain":  "\u0027absolutely\u0027 (B2) — Completely and without any doubt."
+    },
+    {
+        "q":  "3. Which word or phrase from today\u0027s lesson means: \"Totally; in every way.\"?",
+        "options":  [
+                        "completely",
+                        "especially",
+                        "definitely"
+                    ],
+        "correct":  0,
+        "explain":  "\u0027completely\u0027 (B2) — Totally; in every way."
+    },
+    {
+        "q":  "4. Which word or phrase from today\u0027s lesson means: \"Particularly; above all others.\"?",
+        "options":  [
+                        "especially",
+                        "definitely",
+                        "actually"
+                    ],
+        "correct":  0,
+        "explain":  "\u0027especially\u0027 (B2) — Particularly; above all others."
+    }
+];
+    const FLASHCARD_KEYS = Object.keys(VOCAB_DB).slice(0, 12);
+
+    // CORE APPLICATION ENGINE
+    let currentCardIndex = 0;
+    let isCardFlipped = false;
+    let quizAnswered = new Set();
+    let speechRate = 1.0;
+
+    function initHeaderAndHero() {
+      document.getElementById('page-title').textContent = `${LESSON_CONFIG.studentName}'s Peaceful English Sanctuary | ${LESSON_CONFIG.lessonNumber}`;
+      document.getElementById('brand-initial').textContent = LESSON_CONFIG.studentName.charAt(0).toUpperCase();
+      document.getElementById('brand-title').textContent = `${LESSON_CONFIG.studentName}'s Peaceful English Sanctuary`;
+      document.getElementById('brand-badge').textContent = `${LESSON_CONFIG.lessonNumber} • ${LESSON_CONFIG.lessonSubtitle}`;
+      document.getElementById('hero-meta-pill').textContent = `${LESSON_CONFIG.lessonDate} • ${LESSON_CONFIG.lessonSubtitle}`;
+      document.getElementById('hero-heading').innerHTML = LESSON_CONFIG.heroHeadingHtml;
+      document.getElementById('hero-intro').textContent = LESSON_CONFIG.heroIntroText;
+      document.getElementById('opt-student-speaker').value = LESSON_CONFIG.studentName;
+      document.getElementById('opt-student-speaker').textContent = `${LESSON_CONFIG.studentName}'s Turns Only`;
+      document.getElementById('stat-vocab-count').textContent = `${Object.keys(VOCAB_DB).length} Items`;
+      document.getElementById('stat-fixes-count').textContent = `${ASR_FIXES.length} Fixes`;
+
+      const chapters = TRANSCRIPT_TURNS.filter(t => t.chapterId && t.chapterTitle);
+      document.getElementById('chapter-pills-bar').innerHTML = chapters.map(c => `
+        <button onclick="scrollToChapter('${c.chapterId}')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
+          ${c.time} • ${c.chapterTitle.split('•')[1] || c.chapterTitle}
+        </button>
+      `).join('');
+    }
+
+    function renderTranscript() {
+      const container = document.getElementById('transcript-stream-container');
+      const searchVal = (document.getElementById('transcript-search')?.value || '').toLowerCase().trim();
+      const speakerFilter = document.getElementById('speaker-filter')?.value || 'all';
+
+      let html = '';
+      TRANSCRIPT_TURNS.forEach(turn => {
+        if (turn.chapterTitle && speakerFilter === 'all' && !searchVal) {
+          html += `
+            <div id="${turn.chapterId}" class="pt-3 pb-1">
+              <div class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-sage-100/90 via-parchment-100 to-autumn-50 border border-sage-200 flex items-center gap-2 text-xs sm:text-sm font-serif font-bold text-sage-800 shadow-sm">
+                <span>${turn.chapterTitle}</span>
+              </div>
+            </div>
+          `;
+        }
+        if (speakerFilter !== 'all' && turn.speaker !== speakerFilter) return;
+        const plainText = turn.html.replace(/<[^>]+>/g, '').toLowerCase();
+        if (searchVal && !plainText.includes(searchVal) && !turn.time.includes(searchVal)) return;
+
+        const isStudent = turn.speaker !== 'Louie';
+        const cardStyle = isStudent
+          ? 'bg-[#fffdf9] border-l-4 border-l-autumn-500 border border-[#e6decb]'
+          : 'bg-[#f8faf8] border-l-4 border-l-sage-600 border border-[#d8e4dc]';
+        const badgeStyle = isStudent
+          ? 'bg-autumn-100 text-autumn-800 border-autumn-200'
+          : 'bg-sage-100 text-sage-800 border-sage-200';
+
+        html += `
+          <article id="${turn.id}" class="rounded-2xl p-4 sm:p-5 ${cardStyle} shadow-sm transition-all duration-300 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold border ${badgeStyle}">
+                  ${isStudent ? '🎙️ ' + turn.speaker : '🍂 Louie'}
+                </span>
+                <span class="font-mono text-xs text-stone-500">🕒 ${turn.time}</span>
+              </div>
+              <button onclick="speakPlainTurn('${turn.id}')" class="text-stone-400 hover:text-sage-700 transition p-1 rounded-lg">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+            <div class="text-sm sm:text-[15px] text-slatewarm-800 leading-relaxed">${turn.html}</div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+      lucide.createIcons();
+      initVocabTooltips();
+    }
+
+    function initVocabTooltips() {
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        const key = el.getAttribute('data-vkey');
+        const item = VOCAB_DB[key];
+        if (!item) return;
+        if (el._tippy) el._tippy.destroy();
+        tippy(el, {
+          theme: 'autumn-sanctuary',
+          allowHTML: true,
+          interactive: true,
+          animation: 'shift-away',
+          maxWidth: 320,
+          content: `
+            <div class="p-2.5 space-y-2 text-left">
+              <div class="flex items-center justify-between gap-2 border-b border-parchment-200 pb-1.5">
+                <div>
+                  <span class="font-serif font-bold text-base text-slatewarm-900">${item.word}</span>
+                  <span class="block font-mono text-[10px] text-stone-500">${item.ipa} • ${item.pos}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="px-1.5 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[10px] font-bold">${item.level}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[10px]">🕒 ${item.time}</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-700 leading-snug">${item.def}</p>
+              <div class="flex items-center justify-between pt-1 text-[11px] border-t border-parchment-200">
+                <span class="text-sage-800 font-semibold">${item.l1 || ''}</span>
+                <button onclick="speakWord('${item.word.replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded bg-sage-700 text-white text-[10px] font-semibold">🔊 Listen</button>
+              </div>
+            </div>
+          `
+        });
+      });
+    }
+
+    function inspectVocab(key) {
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('insp-time').textContent = `🕒 ${item.time}`;
+      document.getElementById('insp-word').textContent = item.word;
+      document.getElementById('insp-ipa').textContent = item.ipa;
+      document.getElementById('insp-pos').textContent = item.pos;
+      document.getElementById('insp-level').textContent = item.level;
+      document.getElementById('insp-def').textContent = item.def;
+      document.getElementById('insp-quote').textContent = item.quote;
+      document.getElementById('insp-l1-label').textContent = LESSON_CONFIG.l1FlagAndLabel;
+      document.getElementById('insp-l1').textContent = item.l1 || '';
+      document.getElementById('insp-audio-btn').setAttribute('onclick', `speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')`);
+    }
+
+    function renderVocabGrid() {
+      const grid = document.getElementById('vocab-cards-grid');
+      const search = (document.getElementById('vocab-search')?.value || '').toLowerCase().trim();
+      const levelFilter = document.getElementById('vocab-level-filter')?.value || 'all';
+
+      const entries = Object.entries(VOCAB_DB).filter(([key, item]) => {
+        if (levelFilter !== 'all' && item.level !== levelFilter) return false;
+        if (search) {
+          const hay = `${item.word} ${item.def} ${item.l1 || ''} ${item.time}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return true;
+      });
+
+      grid.innerHTML = entries.map(([key, item]) => `
+        <div class="sanctuary-subcard rounded-2xl p-5 flex flex-col justify-between space-y-3 hover:border-autumn-400">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-autumn-100 text-autumn-800 font-mono text-[11px] font-bold">${item.level}</span>
+                <span class="px-2 py-0.5 rounded-md bg-parchment-100 text-stone-600 text-[11px]">${item.pos}</span>
+              </div>
+              <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="px-2.5 py-0.5 rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 font-mono text-[11px] font-semibold">
+                🕒 ${item.time} ↗
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-1">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-slatewarm-900">${item.word}</h3>
+                <span class="text-xs font-mono text-stone-500">${item.ipa}</span>
+              </div>
+              <button onclick="speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')" class="p-2 rounded-xl bg-parchment-100 hover:bg-sage-100 text-sage-800">
+                <i data-lucide="volume-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">${item.def}</p>
+            <p class="text-xs italic text-stone-500 bg-parchment-50 p-2.5 rounded-xl border border-parchment-200">${item.quote}</p>
+          </div>
+          <div class="pt-2 border-t border-parchment-200 flex items-center justify-between text-xs">
+            <span class="text-sage-800 font-medium">${item.l1 || ''}</span>
+            <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="text-autumn-700 hover:underline font-semibold text-[11px]">See in Transcript →</button>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function jumpToTranscriptTurn(turnId, vocabKey) {
+      switchTab('transcript');
+      setTimeout(() => {
+        if (vocabKey) inspectVocab(vocabKey);
+        const el = document.getElementById(turnId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.remove('turn-highlight-flash');
+          void el.offsetWidth;
+          el.classList.add('turn-highlight-flash');
+        }
+      }, 100);
+    }
+
+    function renderFixesAndPlaces() {
+      // 1. Natural Strengths
+      const strengthsContainer = document.getElementById('student-strengths-grid');
+      if (strengthsContainer && Array.isArray(STUDENT_STRENGTHS)) {
+        strengthsContainer.innerHTML = STUDENT_STRENGTHS.map(s => {
+          const time = s.time || '⭐ Observed Today';
+          const phrase = s.phrase || s.title || '';
+          const note = s.note || s.desc || s.quote || '';
+          return `
+            <div class="p-4 rounded-2xl bg-white/95 border border-sage-200/90 shadow-sm space-y-1.5 transition hover:border-sage-400">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] text-sage-700 font-semibold">${time}</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-sage-100 text-sage-800 font-medium">Natural Reflex</span>
+              </div>
+              <div class="font-bold text-slatewarm-900 text-sm leading-snug">${phrase}</div>
+              <p class="text-stone-600 text-xs leading-relaxed">${note}</p>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 2. Gentle Phrasing Polishes
+      const polishesContainer = document.getElementById('gentle-polishes-grid');
+      if (polishesContainer && Array.isArray(GENTLE_POLISHES)) {
+        polishesContainer.innerHTML = GENTLE_POLISHES.map(p => {
+          const topic = p.topic || 'Phrasing Polish';
+          const time = p.time || '';
+          const said = p.said || p.spoken || '';
+          const natural = p.natural || p.polished || '';
+          const why = p.why || p.note || '';
+          const safeAudio = (natural || '').replace(/'/g, "\\'");
+          return `
+            <div class="sanctuary-subcard rounded-2xl p-5 space-y-3 border-l-4 border-l-sage-500 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-sage-800 font-serif text-sm">${topic}</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-parchment-100 font-mono text-[11px] text-stone-600 border border-parchment-200">🕒 ${time}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-autumn-50/70 border border-autumn-200/80 text-xs text-stone-600 space-y-1">
+                <div class="font-semibold text-autumn-800 uppercase text-[10px] tracking-wider">In the moment:</div>
+                <div class="italic text-stone-700 font-medium">"${said}"</div>
+              </div>
+              <div class="p-3 rounded-xl bg-sage-50 border border-sage-200 text-xs text-slatewarm-900 flex items-center justify-between gap-2">
+                <div>
+                  <div class="font-semibold text-sage-800 uppercase text-[10px] tracking-wider">Natural Polish:</div>
+                  <strong class="text-slatewarm-900 text-sm font-serif">"${natural}"</strong>
+                </div>
+                ${natural ? `<button onclick="speakWord('${safeAudio}')" class="p-2 rounded-xl bg-white text-sage-700 hover:bg-sage-100 border border-sage-200 transition shadow-xs" title="Listen">🔊</button>` : ''}
+              </div>
+              <p class="text-xs text-stone-600 leading-relaxed pt-0.5">${why}</p>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 3. ASR Speech-to-Text Corrections
+      const fixesContainer = document.getElementById('asr-fixes-grid');
+      if (fixesContainer && Array.isArray(ASR_FIXES)) {
+        fixesContainer.innerHTML = ASR_FIXES.map(f => `
+          <div class="sanctuary-subcard rounded-2xl p-4 sm:p-5 space-y-2.5 border-t-4 border-t-autumn-400 shadow-sm hover:border-autumn-500 transition">
+            <div class="flex items-center justify-between text-[11px] font-mono">
+              <span class="font-semibold text-autumn-700 px-2 py-0.5 rounded-md bg-autumn-50 border border-autumn-200">${f.speaker}</span>
+              <span class="text-stone-500">🕒 ${f.time}</span>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200 text-xs text-stone-500 line-through">
+              Note-taker wrote: "${f.wrong}"
+            </div>
+            <div class="text-sm font-serif font-bold text-sage-800 flex items-center gap-1.5">
+              <span>✨ Said: "${f.right}"</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed">${f.note}</p>
+          </div>
+        `).join('');
+      }
+
+      // 4. Masterclass Topics & Strategy
+      const placesContainer = document.getElementById('cultural-places-grid');
+      if (placesContainer && Array.isArray(CULTURAL_PLACES)) {
+        placesContainer.innerHTML = CULTURAL_PLACES.map(c => `
+          <div class="sanctuary-subcard rounded-2xl p-6 sm:p-7 space-y-4 border-l-4 border-l-autumn-500 shadow-sm hover:border-autumn-600 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs font-mono text-autumn-700 font-semibold px-2.5 py-0.5 rounded-full bg-autumn-50 border border-autumn-200">${c.meta}</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-medium border border-autumn-200">${c.badge}</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-slatewarm-900 leading-snug">${c.title}</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">${c.desc}</p>
+            <div class="p-4 rounded-xl bg-parchment-50 border border-parchment-200 text-xs sm:text-sm italic text-stone-700 leading-relaxed border-l-2 border-l-autumn-400">
+              ${c.quote}
+            </div>
+            ${c.tags && c.tags.length ? `
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                ${c.tags.map(t => `<span class="px-2 py-0.5 rounded-md bg-sage-50 text-sage-700 text-[10px] font-mono border border-sage-200">#${t}</span>`).join('')}
+              </div>
+            ` : ''}
+          </div>
+        `).join('');
+      }
+    }
+
+    function renderFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('fc-counter').textContent = `Card ${currentCardIndex + 1} of ${FLASHCARD_KEYS.length}`;
+      document.getElementById('fc-badge').textContent = `${item.time} • ${item.pos} (${item.level})`;
+      document.getElementById('fc-front-title').textContent = item.word;
+      const subEl = document.getElementById('fc-sub');
+      const backEl = document.getElementById('fc-back-details');
+      if (!isCardFlipped) {
+        subEl.textContent = `${item.ipa} — Click card to reveal meaning & lesson context`;
+        backEl.classList.add('hidden');
+      } else {
+        subEl.textContent = item.def;
+        document.getElementById('fc-quote').textContent = item.quote;
+        document.getElementById('fc-l1').textContent = item.l1 || '';
+        backEl.classList.remove('hidden');
+      }
+    }
+    function flipFlashcard() { isCardFlipped = !isCardFlipped; renderFlashcard(); }
+    function nextFlashcard() { isCardFlipped = false; currentCardIndex = (currentCardIndex + 1) % FLASHCARD_KEYS.length; renderFlashcard(); }
+    function prevFlashcard() { isCardFlipped = false; currentCardIndex = (currentCardIndex - 1 + FLASHCARD_KEYS.length) % FLASHCARD_KEYS.length; renderFlashcard(); }
+    function speakCurrentFlashcard() { const item = VOCAB_DB[FLASHCARD_KEYS[currentCardIndex]]; if (item) speakWord(item.word); }
+
+    function renderQuiz() {
+      document.getElementById('quiz-container').innerHTML = QUIZ_QUESTIONS.map((q, qIdx) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2.5">
+          <p class="text-xs sm:text-sm font-medium text-slatewarm-900">${q.q}</p>
+          <div class="flex flex-wrap gap-2">
+            ${q.options.map((opt, oIdx) => `
+              <button id="qbtn-${qIdx}-${oIdx}" onclick="answerQuiz(${qIdx}, ${oIdx})" class="px-3 py-1.5 rounded-xl border border-[#dfd0b5] bg-parchment-50 hover:bg-autumn-100 text-xs font-medium text-stone-700 transition">${opt}</button>
+            `).join('')}
+          </div>
+          <p id="qexp-${qIdx}" class="hidden text-xs text-sage-800 bg-sage-50 p-2.5 rounded-xl border border-sage-200"></p>
+        </div>
+      `).join('');
+    }
+
+    function answerQuiz(qIdx, oIdx) {
+      const q = QUIZ_QUESTIONS[qIdx];
+      const expEl = document.getElementById(`qexp-${qIdx}`);
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`qbtn-${qIdx}-${idx}`);
+        if (idx === q.correct) btn.className = 'px-3 py-1.5 rounded-xl border border-sage-500 bg-sage-600 text-white text-xs font-semibold';
+        else if (idx === oIdx) btn.className = 'px-3 py-1.5 rounded-xl border border-autumn-300 bg-autumn-100 text-autumn-900 text-xs';
+      });
+      expEl.textContent = `✨ ${q.explain || q.exp || ''}`;
+      expEl.classList.remove('hidden');
+      if (oIdx === q.correct && !quizAnswered.has(qIdx)) {
+        quizAnswered.add(qIdx);
+        document.getElementById('quiz-score-badge').textContent = `${quizAnswered.size} / ${QUIZ_QUESTIONS.length} Completed`;
+        if (quizAnswered.size === QUIZ_QUESTIONS.length && typeof confetti === 'function') {
+          confetti({ particleCount: 55, spread: 60, origin: { y: 0.7 } });
+        }
+      }
+    }
+
+    function switchTab(tabName) {
+      ['transcript', 'vocab', 'fixes', 'places', 'practice'].forEach(t => {
+        const panel = document.getElementById(`tab-panel-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100';
+        }
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function filterTranscript() { renderTranscript(); }
+    function scrollToChapter(chapId) {
+      document.getElementById('speaker-filter').value = 'all';
+      document.getElementById('transcript-search').value = '';
+      renderTranscript();
+      const el = document.getElementById(chapId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let highlightsOn = true;
+    function toggleVocabHighlights() {
+      highlightsOn = !highlightsOn;
+      document.body.classList.toggle('hide-vocab-highlights', !highlightsOn);
+      document.getElementById('btn-toggle-highlights').querySelector('span').textContent = `Vocab Highlights: ${highlightsOn ? 'On' : 'Off'}`;
+    }
+
+    let asrBadgesOn = true;
+    function toggleAsrBadges() {
+      asrBadgesOn = !asrBadgesOn;
+      document.body.classList.toggle('hide-asr-fixes', !asrBadgesOn);
+      document.getElementById('btn-toggle-asr').querySelector('span').textContent = `Note-Taker Fixes: ${asrBadgesOn ? 'Visible' : 'Hidden'}`;
+    }
+
+    function setThemeMood(mood) { document.body.setAttribute('data-theme', mood); }
+    function setVoiceRate(rate) { speechRate = rate; }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = speechRate;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function speakPlainTurn(turnId) {
+      const turn = TRANSCRIPT_TURNS.find(t => t.id === turnId);
+      if (!turn) return;
+      const temp = document.createElement('div');
+      temp.innerHTML = turn.html;
+      temp.querySelectorAll('.asr-fix-pill').forEach(el => el.remove());
+      speakWord(temp.textContent || '');
+    }
+
+    // Web Audio API Soundscape Engine
+    let audioCtx = null, soundscapePlaying = false, masterGain = null, lfoTimer = null, currentFilter = null;
+    function buildNoiseBuffer(ctx) {
+      const bufferSize = ctx.sampleRate * 4;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = buffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+        b6 = white * 0.115926;
+      }
+      return buffer;
+    }
+
+    function toggleSoundscape() {
+      const label = document.getElementById('soundscape-label');
+      if (!soundscapePlaying) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const noiseSource = audioCtx.createBufferSource();
+        noiseSource.buffer = buildNoiseBuffer(audioCtx);
+        noiseSource.loop = true;
+        currentFilter = audioCtx.createBiquadFilter();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = parseFloat(document.getElementById('soundscape-volume').value || '0.22');
+        noiseSource.connect(currentFilter);
+        currentFilter.connect(masterGain);
+        masterGain.connect(audioCtx.destination);
+        noiseSource.start();
+        audioCtx._activeSource = noiseSource;
+        soundscapePlaying = true;
+        changeSoundscapePreset(document.getElementById('soundscape-preset').value);
+        label.textContent = 'London Breeze: Playing';
+      } else {
+        if (lfoTimer) clearInterval(lfoTimer);
+        if (audioCtx && audioCtx._activeSource) { try { audioCtx._activeSource.stop(); } catch (e) {} }
+        soundscapePlaying = false;
+        label.textContent = 'London Breeze Audio: Off';
+      }
+    }
+
+    function changeSoundscapePreset(preset) {
+      if (!currentFilter || !audioCtx) return;
+      if (lfoTimer) clearInterval(lfoTimer);
+      if (preset === 'breeze') {
+        currentFilter.type = 'bandpass';
+        currentFilter.frequency.value = 340;
+      } else if (preset === 'rain') {
+        currentFilter.type = 'lowpass';
+        currentFilter.frequency.value = 880;
+      } else {
+        currentFilter.type = 'lowpass';
+        currentFilter.frequency.value = 240;
+      }
+    }
+    function updateSoundscapeVolume(val) { if (masterGain && audioCtx) masterGain.gain.value = parseFloat(val); }
+
+    // Canvas Autumn Leaves Engine
+    const canvas = document.getElementById('autumn-breeze-canvas');
+    const ctx = canvas.getContext('2d');
+    let leaves = [], leafMode = 1, breezeTime = 0;
+    const LEAF_COLORS = ['rgba(190,111,56,0.42)', 'rgba(211,140,87,0.40)', 'rgba(165,191,177,0.42)', 'rgba(203,179,142,0.45)'];
+    function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function rebuildLeaves() {
+      const count = leafMode === 1 ? 15 : leafMode === 2 ? 30 : 0;
+      leaves = Array.from({ length: count }, () => ({
+        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+        size: 6 + Math.random() * 8, speedY: 0.35 + Math.random() * 0.55, speedX: 0.25 + Math.random() * 0.45,
+        angle: Math.random() * Math.PI * 2, spin: (Math.random() - 0.5) * 0.014, swayOffset: Math.random() * 100,
+        color: LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)]
+      }));
+    }
+    function cycleLeafBreeze() {
+      leafMode = (leafMode + 1) % 3;
+      document.getElementById('leaves-label').textContent = leafMode === 1 ? 'Leaves: Gentle' : leafMode === 2 ? 'Leaves: Breeze' : 'Leaves: Still';
+      rebuildLeaves();
+    }
+    function animateLeaves() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (leafMode !== 0) {
+        breezeTime += 0.01;
+        leaves.forEach(l => {
+          l.y += l.speedY; l.x += l.speedX + Math.sin(breezeTime + l.swayOffset) * 0.45; l.angle += l.spin;
+          if (l.y > canvas.height + 20) { l.y = -20; l.x = Math.random() * canvas.width; }
+          if (l.x > canvas.width + 20) l.x = -20;
+          ctx.save(); ctx.translate(l.x, l.y); ctx.rotate(l.angle); ctx.fillStyle = l.color;
+          ctx.beginPath(); ctx.ellipse(0, 0, l.size, l.size * 0.52, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+        });
+      }
+      requestAnimationFrame(animateLeaves);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initHeaderAndHero();
+      renderTranscript();
+      renderVocabGrid();
+      renderFixesAndPlaces();
+      renderFlashcard();
+      renderQuiz();
+      if (LESSON_CONFIG.defaultSpotlightKey) inspectVocab(LESSON_CONFIG.defaultSpotlightKey);
+      rebuildLeaves();
+      animateLeaves();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
